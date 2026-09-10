@@ -1,0 +1,53 @@
+# The thin vertical slice: one classification step over the real corpus.
+#
+# Run it:
+#   slmflow run examples/repurposing_label.yaml --input drug=metformin \
+#       --input indication=cancer --trace runs/label.jsonl
+#
+# Or with no model weights at all, to see the machinery work:
+#   slmflow run examples/repurposing_label.yaml --mock --input drug=metformin \
+#       --input indication=cancer
+
+name: repurposing_label
+
+# Omitting `budget` is deliberate: the budget is probed from the machine, so
+# this config is portable across the hardware tiers C2 is about. Override with
+# SLMFLOW_VRAM_BUDGET / SLMFLOW_RAM_BUDGET, or uncomment below.
+# budget:
+#   vram_gb: 5.0
+#   ram_gb: 8.0
+
+router: heuristic       # consults live residency, not just a static table
+scheduler: greedy       # swap-aware; use `naive` for the C1 ablation
+seed: 0                 # Ground Rule 11: reproducibility is a feature
+
+defaults:
+  max_output_tokens: 24
+  use_grammar: true     # makes invalid JSON impossible, not merely unlikely
+
+steps:
+  - name: label
+    task_type: classify
+    strategy: adaptive  # C4: sequential self-consistency with early stopping
+    k: 5                # maximum samples; it stops sooner when confident
+    temperature: 0.7    # must be > 0 or self-consistency is vacuous
+    threshold: 0.6      # below this the step abstains
+    prompt: |
+      You classify drug repurposing evidence.
+
+      Drug: {drug}
+      Candidate indication: {indication}
+
+      Choose exactly one label:
+      - approved: the indication is on the FDA label for this drug
+      - investigational: off-label, but a registered clinical trial studies it
+      - hypothesis: off-label, published literature only, no registered trial
+    output_schema:
+      type: object
+      title: repurposing_label
+      properties:
+        label:
+          type: string
+          enum: [approved, investigational, hypothesis]
+      required: [label]
+      additionalProperties: false

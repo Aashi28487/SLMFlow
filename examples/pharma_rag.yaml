@@ -1,0 +1,104 @@
+# Phase 9 + Phase 19: the pharma demonstration, entirely local.
+#
+# A four-step DAG showing the pattern the thesis argues for: retrieval, then a
+# small model extracting, then a summariser, then a *tiny* verifier checking
+# the summariser's work against the retrieved evidence.
+#
+# Nothing leaves the machine. No hosted API is reachable from this config.
+#
+# Run it:
+#   python examples/pharma_demo.py --drug metformin --indication cancer
+
+name: pharma_repurposing_report
+
+router: heuristic
+scheduler: greedy
+seed: 0
+
+# The C3 contract. Calibrate before trusting it:
+#   pipeline.calibrate(items) tunes the threshold and reports the coverage cost.
+guarantee:
+  precision: 0.85
+  delta: 0.1
+
+defaults:
+  use_grammar: true
+
+steps:
+  # 1. Extract the structured claim. A small model is enough for a mechanical
+  #    task, which is the Phase 3 hypothesis the complementarity matrix tests.
+  - name: extract
+    task_type: extract
+    strategy: single
+    max_output_tokens: 96
+    prompt: |
+      From the evidence above, extract what is known about this drug and
+      indication. Use only the evidence; if a field is unknown, use 0 or "".
+
+      Drug: {drug}
+      Candidate indication: {indication}
+    output_schema:
+      type: object
+      title: repurposing_claim
+      properties:
+        drug: {type: string}
+        indication: {type: string}
+        max_trial_phase: {type: integer, minimum: 0, maximum: 4}
+        n_trials: {type: integer, minimum: 0}
+        on_fda_label: {type: boolean}
+      required: [drug, indication, max_trial_phase, n_trials, on_fda_label]
+      additionalProperties: false
+
+  # 2. Classify, with real sampling: this is the judgement call, so it earns
+  #    the cost of self-consistency.
+  - name: label
+    task_type: classify
+    strategy: adaptive
+    k: 5
+    temperature: 0.7
+    threshold: 0.6
+    depends_on: [extract]
+    max_output_tokens: 24
+    prompt: |
+      Using the extracted claim above, classify the repurposing evidence for
+      {drug} in {indication}.
+
+      - approved: on the FDA label
+      - investigational: off-label with a registered trial
+      - hypothesis: off-label, literature only
+    output_schema:
+      type: object
+      title: repurposing_label
+      properties:
+        label:
+          type: string
+          enum: [approved, investigational, hypothesis]
+      required: [label]
+      additionalProperties: false
+
+  # 3. Write the report. Cited, because an uncited pharma claim is unusable.
+  - name: report
+    task_type: summarise
+    strategy: single
+    depends_on: [label, extract]
+    max_output_tokens: 256
+    threshold: 0.0        # a summary is not a discrete answer to abstain on
+    prompt: |
+      Write three sentences for a clinical pharmacologist about {drug} for
+      {indication}. State the evidence class, cite the numbered evidence items
+      you used as [1], [2], and say plainly what is NOT established.
+
+  # 4. The tiny verifier: a 0.5B model checking the larger model's summary.
+  #    Selective by construction -- it is skipped when confidence is already
+  #    high, because verifying a confident answer costs a model load and may
+  #    evict the generator.
+  - name: verify
+    task_type: verify
+    strategy: single
+    depends_on: [report]
+    max_output_tokens: 8
+    threshold: 0.0
+    verifier: null        # set to a 0.5B model id once one is profiled
+    prompt: |
+      Does the report above make only claims supported by the numbered
+      evidence? Reply with exactly one word, YES or NO.

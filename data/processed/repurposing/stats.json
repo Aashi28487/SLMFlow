@@ -1,0 +1,88 @@
+{
+  "built": "2026-08-18",
+  "raw": {
+    "pubmed_abstracts": 6493,
+    "ctgov_studies": 4866,
+    "openfda_labels": 63
+  },
+  "processed": {
+    "passages": 19378,
+    "pairs": 140,
+    "qa_pairs": 333
+  },
+  "pair_label_distribution": {
+    "investigational": 106,
+    "approved": 24,
+    "hypothesis": 10
+  },
+  "qa_task_distribution": {
+    "repurposing_evidence": 140,
+    "trial_lookup": 130,
+    "label_lookup": 63
+  },
+  "pubmed_evidence_grade": {
+    "background": 5474,
+    "strong": 1019
+  },
+  "trial_phase_distribution": {
+    "PHASE2": 1055,
+    "PHASE3": 811,
+    "NA": 1171,
+    "PHASE2|PHASE3": 162,
+    "PHASE1": 567,
+    "PHASE4": 813,
+    "PHASE1|PHASE2": 196,
+    "EARLY_PHASE1": 91
+  },
+  "held_out_test_drugs": [
+    "allopurinol",
+    "amitriptyline",
+    "baricitinib",
+    "bevacizumab",
+    "botulinum toxin",
+    "cimetidine",
+    "dexamethasone",
+    "doxycycline",
+    "empagliflozin",
+    "minoxidil",
+    "sildenafil",
+    "zoledronic acid"
+  ],
+  "test_items": 64,
+  "partitions": {
+    "noniid": {
+      "hospital_a": {
+        "train": 73,
+        "val": 9,
+        "specialty": "general medicine / cardiometabolic"
+      },
+      "hospital_b": {
+        "train": 93,
+        "val": 12,
+        "specialty": "pharmacology / oncology / immunology"
+      },
+      "hospital_c": {
+        "train": 73,
+        "val": 9,
+        "specialty": "neurology / psychiatry / paediatrics"
+      }
+    },
+    "iid": {
+      "hospital_a": {
+        "train": 73,
+        "val": 9,
+        "specialty": "general medicine / cardiometabolic"
+      },
+      "hospital_b": {
+        "train": 93,
+        "val": 12,
+        "specialty": "pharmacology / oncology / immunology"
+      },
+      "hospital_c": {
+        "train": 73,
+        "val": 9,
+        "specialty": "neurology / psychiatry / paediatrics"
+      }
+    }
+  }
+}
