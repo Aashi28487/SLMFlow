@@ -1,0 +1,53 @@
+# --- model weights: never commit (Ground Rule 7) ---
+*.gguf
+*.bin
+*.safetensors
+models/
+adapters/
+
+# --- large data archives ---
+data.zip
+*.pdf
+
+# --- raw API responses: 26 MB, regenerable, and read by no code in slmflow.
+# Only data/processed/ and data/partitions/ are consumed (benchmarks/tasks.py,
+# slmflow/rag/store.py), so those ARE committed. Regenerate raw/ with
+# future_work/fedslm/data/repurposing/download_all.py if it is ever needed.
+data/raw/
+
+# --- unrelated third-party tooling dropped into the working directory ---
+claude skills/
+
+# --- raw benchmark output (results/*.md and *.json summaries ARE committed) ---
+benchmarks/results/raw/
+benchmarks/results/**/*.jsonl
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+.eggs/
+
+# --- tooling caches ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- local overrides ---
+.env
+*.local.yaml

@@ -1,0 +1,100 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slmflow"
+dynamic = ["version"]
+description = "Memory-bounded orchestration of small language models on local hardware"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SLMFlow authors" }]
+keywords = ["llm", "slm", "orchestration", "scheduling", "llama.cpp", "ollama", "edge"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+
+# ---------------------------------------------------------------------------
+# BUILD_BRIEF.md section 2: the core must import and run on T0 (a phone).
+# Therefore `dependencies` is EMPTY and must stay empty. Pure Python + stdlib.
+# Everything heavy lives in an extra behind a lazy import.
+# ---------------------------------------------------------------------------
+dependencies = []
+
+[project.optional-dependencies]
+llama  = ["llama-cpp-python>=0.3.2"]
+ollama = ["httpx>=0.27"]
+yaml   = ["PyYAML>=6.0"]
+rag    = ["sentence-transformers>=3.0", "faiss-cpu>=1.8", "numpy>=1.26"]
+bench  = ["numpy>=1.26", "matplotlib>=3.8", "psutil>=5.9", "PyYAML>=6.0"]
+cli    = ["typer>=0.12"]
+dev    = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+  "hypothesis>=6.100",
+  "mypy>=1.10",
+  "ruff>=0.5",
+  "psutil>=5.9",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+slmflow = "slmflow.cli:main"
+
+[project.urls]
+Documentation = "https://github.com/your-org/slmflow/tree/main/docs"
+
+[tool.hatch.version]
+path = "src/slmflow/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slmflow"]
+
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+asyncio_mode = "auto"
+markers = [
+  "real_model: needs real local model weights; deselect with -m 'not real_model'",
+  "slow: long-running benchmark-scale test",
+]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src/slmflow"]
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+no_implicit_reexport = false
+
+[[tool.mypy.overrides]]
+module = ["llama_cpp.*", "httpx.*", "yaml.*", "faiss.*", "sentence_transformers.*", "numpy.*", "psutil.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests", "benchmarks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "RET", "PTH", "T20", "ANN", "D"]
+ignore = ["D203", "D213", "ANN401"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*"      = ["D", "ANN"]
+"benchmarks/*" = ["T20", "D103"]
+"examples/*"   = ["T20", "D", "ANN"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
