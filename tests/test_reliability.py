@@ -78,15 +78,15 @@ class TestConfidenceSignals:
 
     def test_cross_model_agreement_gives_each_model_one_vote(self):
         """A model sampled ten times must not outvote a model sampled once."""
-        gens = [gen("a", "m1")] * 10 + [gen("b", "m2")]
+        gens = [gen("yes", "m1")] * 10 + [gen("no", "m2")]
         assert CrossModelAgreement().score(gens, {}) == pytest.approx(0.5)
 
     def test_cross_model_agreement_needs_two_models(self):
-        assert CrossModelAgreement().score([gen("a", "m1")] * 5, {}) == 0.0
+        assert CrossModelAgreement().score([gen("yes", "m1")] * 5, {}) == 0.0
 
     def test_contradiction_rate_is_pairwise_disagreement(self):
-        gens = [gen("a", "m1"), gen("b", "m2"), gen("a", "m3")]
-        # Pairs: (a,b) disagree, (a,a) agree, (b,a) disagree -> 2/3
+        gens = [gen("yes", "m1"), gen("no", "m2"), gen("yes", "m3")]
+        # Pairs: (yes,no) disagree, (yes,yes) agree, (no,yes) disagree -> 2/3
         assert contradiction_rate(gens) == pytest.approx(2 / 3)
 
     def test_retrieval_support_measures_groundedness(self):
@@ -205,7 +205,7 @@ class TestAbstentionPolicy:
         assert decision.reason is AbstentionReason.SCHEMA_FAILURE
 
     def test_contradiction_abstains_despite_confidence(self):
-        gens = [gen("a", "m1"), gen("b", "m2")]
+        gens = [gen("yes", "m1"), gen("no", "m2")]
         policy = AbstentionPolicy(threshold=0.0, max_contradiction=0.4)
         decision = policy.decide(1.0, generations=gens)
         assert decision.abstained

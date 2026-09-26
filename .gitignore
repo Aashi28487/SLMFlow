@@ -2,8 +2,8 @@
 *.gguf
 *.bin
 *.safetensors
-models/
-adapters/
+/models/
+/adapters/
 
 # --- large data archives ---
 data.zip

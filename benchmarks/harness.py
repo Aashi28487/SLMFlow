@@ -725,7 +725,14 @@ def build_registry(*, mock: bool, cards: str) -> ModelRegistry:
         }
         registry.register_backend("mock", MockBackend(responses, default_answer="investigational"))
         return registry
-    return ModelRegistry.from_file(cards)
+    registry = ModelRegistry.from_file(cards)
+    # Register backends for every unique backend name found in the loaded cards
+    from slmflow.models.backends import get_backend as _get_backend
+
+    for card in registry:
+        if card.backend not in registry._backends:
+            registry.register_backend(card.backend, _get_backend(card.backend))
+    return registry
 
 
 def main(argv: Sequence[str] | None = None) -> int:
