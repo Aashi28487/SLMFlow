@@ -91,7 +91,22 @@ class TestResourceManager:
         assert manager.ledger.loads == loads_after_first
         assert manager.ledger.warm_hits == 1
 
-    def test_cold_then_warm_load_cost(self, manager, small_card):
+    def test_cold_then_warm_load_cost(self, manager, small_card, backend):
+        # MockBackend.load is a no-op, so wall-clock timings are nanosecond
+        # noise and the comparison flakes. Give the first (cold) load a real,
+        # measurable cost and leave warm reloads instant.
+        import time
+
+        original_load = backend.load
+        calls = {"n": 0}
+
+        def slow_first_load(card):
+            if calls["n"] == 0:
+                time.sleep(0.02)
+            calls["n"] += 1
+            original_load(card)
+
+        backend.load = slow_first_load
         with manager.resident(small_card) as handle:
             assert handle.was_cold
             first = handle.load_seconds
