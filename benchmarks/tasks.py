@@ -240,7 +240,7 @@ def load_repurposing_label(*, split: str = "train", limit: int | None = None) ->
         prompt_template=_LABEL_PROMPT,
         output_schema=enum_schema(list(REPURPOSING_LABELS), name="label"),
         metric="exact_match",
-        max_output_tokens=24,
+        max_output_tokens=32,
     )
 
 
@@ -286,7 +286,7 @@ def load_trial_lookup(*, limit: int | None = None) -> TaskFamily:
             title="trial_lookup",
         ),
         metric="json_exact_match",
-        max_output_tokens=48,
+        max_output_tokens=96,
     )
 
 

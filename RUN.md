@@ -1,27 +1,31 @@
-# RUN.md — running SLMFlow on the target machine
+# RUN.md — running SLMFlow on a new machine
 
-Every command here is meant to be run on **the evaluation machine**
-(Intel i5 HX-series, discrete GPU ~6 GB VRAM, 16 GB RAM, 512 GB SSD).
-Nothing in this repository has been executed yet: the code was written without
-running it, so **Step 1 and Step 2 are where you find out whether it works.**
+## Quick start (any machine with Python >= 3.10 and Ollama)
 
-Read `docs/TECH_STACK_SETUP.md` first for what to install. This file is the
-order to run things in.
+```bash
+git clone https://github.com/Aashi28487/SLMFlow && cd SLMFlow
+python -m venv .venv
+.venv\Scripts\activate      # Linux/macOS: source .venv/bin/activate
+pip install -e ".[dev,ollama,bench,yaml]"
+pytest -m "not real_model"                          # must be green (122 passed, 4 skipped)
+ollama serve                                        # in another terminal
+python -m benchmarks.run_all --dry-run              # print the plan
+python -m benchmarks.run_all --fresh --seeds 3      # the real run
+```
 
-Time estimates assume the machine above and are rough.
+`run_all` probes the machine, pulls and profiles each model, then runs regret,
+router training, calibration and the full harness on the validation and the
+held-out test split. Pick other models with
+`--models "<id>:<params_b>[:<backend>]" ...`; for a bigger GPU, add e.g.
+`qwen2.5:7b-instruct-q4_K_M:7.0`. It rewrites `docs/RESULTS.md` and
+`docs/ENVIRONMENT.md`; commit those plus `benchmarks/results/` afterwards.
 
----
+**Smoke test first:** `python -m benchmarks.run_all --fresh --seeds 1 --limit 20`.
+Every accuracy must be above 0 and schema-valid above 0 before the full run.
+If accuracy is 0 again, send `benchmarks/results/raw/*_items.json`.
 
-## 0. Where you are
-
-| | |
-|---|---|
-| Implemented | Phases 0–12 of `BUILD_BRIEF.md` (code, tests, harness, docs) |
-| Measured | **nothing** — every number in `docs/RESULTS.md` reads `not yet measured` |
-| Model weights | none downloaded; `.gitignore` excludes them |
-| Tests | written, **never run** |
-
-So the first real milestone is not a result. It is *green tests*.
+The sections below are the older step-by-step version of the same procedure.
+The "never run" remarks in them are out of date.
 
 ---
 

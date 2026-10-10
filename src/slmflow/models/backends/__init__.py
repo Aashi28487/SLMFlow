@@ -29,10 +29,12 @@ def get_backend(name: str, **kwargs: Any):
         from slmflow.models.backends.ollama import OllamaBackend
         return OllamaBackend(**kwargs)
     if name == "llama_cpp":
-        raise BackendUnavailable(
-            "llama_cpp backend is not yet implemented. Use ollama instead."
-        )
-    raise BackendUnavailable(f"Unknown backend {name!r}. Choose from: ollama, llama_cpp, mock.")
+        from slmflow.models.backends.llama_cpp import LlamaCppBackend
+        return LlamaCppBackend(**kwargs)
+    raise BackendUnavailable(
+        f"Unknown backend {name!r}. Choose from: ollama, llama_cpp, mock.",
+        backend=name,
+    )
 
 
 def available_backends() -> dict[str, bool]:

@@ -9,7 +9,12 @@ description = "Memory-bounded orchestration of small language models on local ha
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "SLMFlow authors" }]
+authors = [
+  { name = "Aashi" },
+  { name = "Sneha" },
+  { name = "Rutvik" },
+  { name = "Prakriti" },
+]
 keywords = ["llm", "slm", "orchestration", "scheduling", "llama.cpp", "ollama", "edge"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -51,7 +56,10 @@ dev    = [
 slmflow = "slmflow.cli:main"
 
 [project.urls]
-Documentation = "https://github.com/your-org/slmflow/tree/main/docs"
+Homepage = "https://github.com/Aashi28487/SLMFlow"
+Repository = "https://github.com/Aashi28487/SLMFlow"
+Documentation = "https://github.com/Aashi28487/SLMFlow/tree/main/docs"
+Issues = "https://github.com/Aashi28487/SLMFlow/issues"
 
 [tool.hatch.version]
 path = "src/slmflow/__init__.py"
@@ -63,6 +71,7 @@ packages = ["src/slmflow"]
 [tool.pytest.ini_options]
 minversion = "8.0"
 testpaths = ["tests"]
+pythonpath = ["src", "."]
 addopts = "-q --strict-markers"
 asyncio_mode = "auto"
 markers = [

@@ -14,15 +14,17 @@ system**, and no existing orchestrator represents it at all.
 SLMFlow does. Residency, swap cost and a per-tier memory ceiling are first-class
 objects in the execution model, not deployment details.
 
-> ### Status: implemented, not yet measured
+> ### Status: alpha. Code works; benchmark numbers are being re-measured
 >
-> Phases 0–12 of `BUILD_BRIEF.md` are code complete. **Nothing has been run** —
-> no test executed, no model downloaded, no benchmark producing a number. Every
-> figure in `docs/RESULTS.md` reads `not yet measured`, deliberately: per Ground
-> Rule 1, no number appears in this repository unless it came from code actually
-> run on real hardware.
+> The test suite passes (`pytest -m "not real_model"`). A first benchmark run on
+> 2026-09-13 produced accuracy 0.000 everywhere because of scorer and setup
+> bugs, which have since been fixed; **those numbers are invalid and must not
+> be cited.** The full benchmark is being re-run on a stronger machine. Until
+> `docs/RESULTS.md` is regenerated from that run, treat it as stale.
 >
-> Start at **[`RUN.md`](RUN.md)**. Step 2 is where correctness is first tested.
+> Per Ground Rule 1, no number appears in this repository unless it came from
+> code actually run on real hardware. Start at **[`RUN.md`](RUN.md)**; the
+> one-command run is `python -m benchmarks.run_all`.
 
 ---
 

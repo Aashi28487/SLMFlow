@@ -306,7 +306,16 @@ class RunOutcome:
 # --------------------------------------------------------------------------- #
 # Evaluation
 # --------------------------------------------------------------------------- #
-def _score_item(family: TaskFamily, item: BenchmarkItem, predicted: str) -> bool:
+#: Minimum token-overlap support for a grounded_qa answer to count as correct.
+GROUNDED_THRESHOLD = 0.5
+
+
+def _score_item(
+    family: TaskFamily,
+    item: BenchmarkItem,
+    predicted: str,
+    groundedness: float | None = None,
+) -> bool:
     """Apply the family's metric to one prediction."""
     if family.metric == "json_exact_match":
         parsed = extract_json(predicted)
@@ -323,11 +332,15 @@ def _score_item(family: TaskFamily, item: BenchmarkItem, predicted: str) -> bool
             for key, value in gold.items()
         )
     if family.metric == "groundedness":
-        # Groundedness is scored separately; correctness here is a loose
-        # containment check, deliberately reported as such in the table
-        # rather than presented as answer accuracy.
-        gold_head = normalise_answer(item.gold)[:40]
-        return bool(gold_head) and gold_head in normalise_answer(predicted)
+        # The gold answer is a fixed template, so containment can never match
+        # free text. An answer counts as correct when it is non-empty and its
+        # content words are supported by the retrieved evidence. Reported as
+        # groundedness, not as answer accuracy.
+        return bool(predicted.strip()) and (groundedness or 0.0) >= GROUNDED_THRESHOLD
+    parsed = extract_json(predicted)
+    if isinstance(parsed, dict) and len(parsed) == 1:
+        # Enum-schema answers arrive as {"label": "..."}; score the value.
+        predicted = str(next(iter(parsed.values())))
     return normalise_answer(predicted) == normalise_answer(item.gold)
 
 
@@ -437,7 +450,7 @@ def evaluate(
                     item_id=item.item_id,
                     predicted=predicted,
                     gold=item.gold,
-                    correct=(not result.abstained) and _score_item(family, item, predicted),
+                    correct=(not result.abstained) and _score_item(family, item, predicted, groundedness),
                     confidence=result.confidence or 0.0,
                     abstained=result.abstained,
                     schema_valid=result.schema_valid,

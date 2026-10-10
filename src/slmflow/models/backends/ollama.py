@@ -185,6 +185,11 @@ class OllamaBackend:
         }
         if stop:
             payload["options"]["stop"] = list(stop)
+        # Ollama cannot take a GBNF grammar, but it can constrain output to
+        # valid JSON. The strategy layer appends "Reply with JSON only" exactly
+        # when the step has an output schema, so that marker enables JSON mode.
+        if grammar is not None or "Reply with JSON only" in prompt:
+            payload["format"] = "json"
 
         body = json.dumps(payload).encode()
         req = urllib.request.Request(
