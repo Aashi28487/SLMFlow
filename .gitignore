@@ -19,8 +19,8 @@ data/raw/
 claude skills/
 
 # --- raw benchmark output (results/*.md and *.json summaries ARE committed) ---
-benchmarks/results/raw/
-benchmarks/results/**/*.jsonl
+# benchmarks/results/raw/
+# benchmarks/results/**/*.jsonl
 
 # --- python ---
 __pycache__/

@@ -1,0 +1,422 @@
+[
+  {
+    "item_id": "metformin|cancer|q1",
+    "predicted": "Yes, there is evidence that metformin has an effect beyond its approved use, specifically in cancer. The evidence suggests that metformin can promote health benefits beyond its approved use, including weight loss, cancer prevention and treatment, and anti-aging.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Metformin is approved for type 2 diabetes mellitus, and cancer does not appear in its FDA label, yet 9 registered trial(s) study it for this indication (highest phase reached: PHASE2|PHASE3), alongside 75 publication(s), 4 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:39834076; PMID:36625733; PMID:35640743; NCT04741945 (PHASE2); NCT01477060 (PHASE2); NCT01620593 (PHASE2).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 11.815119600039907,
+    "swaps": 1,
+    "swap_seconds": 7.275324399932288,
+    "generations": 1,
+    "output_tokens": 52,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9230769230769231,
+    "error": null
+  },
+  {
+    "item_id": "metformin|cancer|q2",
+    "predicted": "To answer this question, I'll analyze the evidence provided:\n\n1. Evidence 1: \"RETRACTED: Metformin and Breast Cancer: Where Are We Now? Breast cancer is the most prevalent cancer and the leading cause of cancer-related death among women worldwide. Type 2 diabetes-associated metabolic traits such as hyperglycemia, hyperinsulinemia, inflammation, oxidative stress, and obesity are well-known risk factors for breast cancer. The insulin sensitizer metformin, one of the most prescribed oral antidiabetic drugs, has been suggested to function as an antitumoral agent, based on epidemiological and retrospective clinical data as well as preclinical studies showing an antiproliferative effect in cultured breast cancer cells and animal models. These benefits provided a strong rationale to study the effects of metformin in routine clinical care of breast cancer patients. However, the initial enthusiasm was tempered after disappointing results in randomized controlled trials, particularly in",
+    "gold": "9 registered trial(s) in this corpus study metformin for cancer. The highest-phase records are: NCT04741945 - Repurposing Metformin As a Leukemia-preventive Drug in CCUS and LR-MDS (phase PHASE2, recruiting); NCT01477060 - Modulation of Response to Hormonal Therapy With Lapatinib and/or Metformin in Patients Wit (phase PHASE2, terminated); NCT01620593 - Castration Compared to Castration Plus Metformin as First Line Treatment for Patients With (phase PHASE2, completed); NCT02042495 - Endometrial Cancer Biomarker Changes Following Exposure to Metformin (phase PHASE2, withdrawn).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.0573958000168204,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9693877551020408,
+    "error": null
+  },
+  {
+    "item_id": "metformin|polycystic_ovary_syndrome|q1",
+    "predicted": "Yes, there is evidence that metformin has an effect beyond its approved use in polycystic ovary syndrome (PCOS). The evidence suggests that metformin may have a broader impact on the treatment of PCOS, including its metabolic and reproductive consequences. Specifically, the evidence indicates that:\n\n1. Metformin may lower testosterone levels in women with PCOS, which is related to its insulin sensitizing actions.\n2. Genetic factors may play a significant role in predicting response to metformin therapy in PCOS.\n3. Well-designed prospective trials are needed to establish clear benefit for metformin use in the treatment of the reproductive and metabolic consequences associated with PCOS.\n4. Metformin is not recommended for use in women with PCOS, as well as pregnant women with PCOS, due to its potential to increase the risk of cardiovascular events and other complications.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Metformin is approved for type 2 diabetes mellitus, and polycystic ovary syndrome does not appear in its FDA label, yet 14 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 31 publication(s), 11 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40473092; PMID:40091529; PMID:37554096; NCT00378729 (PHASE4); NCT00502229 (PHASE4); NCT00068861 (PHASE3).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.990971100050956,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 179,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7951807228915663,
+    "error": null
+  },
+  {
+    "item_id": "metformin|polycystic_ovary_syndrome|q2",
+    "predicted": "The evidence states that a randomized controlled trial comparing myoinositol with metformin versus metformin monotherapy in polycystic ovary syndrome was conducted.",
+    "gold": "14 registered trial(s) in this corpus study metformin for polycystic ovary syndrome. The highest-phase records are: NCT00378729 - Surgical Ovarian Drilling Versus Hormonal Treatment for Infertility Associated to PolyCyst (phase PHASE4, unknown); NCT00502229 - Therapy for Infertile PCOS Patients Ovulating Under Clomiphene Citrate or Metformin (phase PHASE4, withdrawn); NCT00068861 - Treatment of Infertility in Women With Polycystic Ovary Syndrome (phase PHASE3, completed); NCT02491333 - The RCT of Acupuncture on PCOS Combined With IR (phase PHASE3, completed).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.5145842999918386,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 35,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9411764705882353,
+    "error": null
+  },
+  {
+    "item_id": "metformin|non-alcoholic_fatty_liver_disease|q1",
+    "predicted": "Yes, there is evidence that metformin has an effect beyond its approved use, specifically in non-alcoholic fatty liver disease (NAFLD). The evidence suggests that metformin can improve NAFLD and its related metabolic status. Specifically, it is mentioned that metformin was effective in reducing enzyme levels in the short period, but very limited and controversial information is available on liver histology. Larger randomized controlled trials of sufficient duration using clearly defined histological endpoints are needed to fully assess the efficacy of this drug in modifying the natural history of NAFLD.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Metformin is approved for type 2 diabetes mellitus, and non-alcoholic fatty liver disease does not appear in its FDA label, yet 6 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 23 publication(s), 5 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:39834076; PMID:39886030; PMID:38159676; NCT02147925 (PHASE4); NCT06218342 (PHASE4); NCT00303537 (PHASE2|PHASE3).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.804262200021185,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 115,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9166666666666666,
+    "error": null
+  },
+  {
+    "item_id": "metformin|non-alcoholic_fatty_liver_disease|q2",
+    "predicted": "To answer this question, I'll analyze the evidence provided:\n\n1. Evidence 1: Metformin in the treatment of non-alcoholic fatty liver disease: safety, efficacy and mechanism.\n2. Evidence 2: Effects of GLP-1 receptor agonists on the degree of liver fibrosis and CRP in non-alcoholic fatty liver disease and non-alcoholic steatohepatitis: A systematic review and meta-analysis.\n3. Evidence 3: Non-alcoholic fatty liver disease and steatohepatitis: State of the art on effective therapeutics based on the gold standard method for diagnosis.\n4. Evidence 4: Treatment of non-alcoholic fatty liver disease. Non-alcoholic fatty liver disease (NAFLD) is now the commonest cause of chronic liver disease in developed countries. Treatment depends on the stage of disease, and non-invasive methods for risk stratification are urgently needed. Lifestyle modification (aimed at weight loss",
+    "gold": "6 registered trial(s) in this corpus study metformin for non-alcoholic fatty liver disease. The highest-phase records are: NCT02147925 - Efficacy Study of Liraglutide vs.Sitagliptin vs. Glargine on Liver Fat in T2DM Subjects (phase PHASE4, completed); NCT06218342 - Henagliflozin in Relieving Type 2 Diabetes With Non-alcoholic Fatty Liver Disease (phase PHASE4, unknown); NCT00303537 - Metformin in Non-Alcoholic Fatty Liver Disease (phase PHASE2|PHASE3, unknown); NCT07338331 - Comparative Effects of Aspirin, Metformin and SGLT2 Inhibitors on Liver Enzymes, Lipid Pro (phase NA, completed).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.0567831998923793,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8875,
+    "error": null
+  },
+  {
+    "item_id": "metformin|aging|q1",
+    "predicted": "Yes, there is evidence that metformin has an effect beyond its approved use, specifically in aging. The evidence suggests that metformin can extend lifespan and improve healthspan, which are important aspects of aging. The review discusses the mechanisms by which metformin exerts its effects, including its impact on key hallmark events of aging, such as dysregulated nutrient sensing, loss of proteostasis, mitochondrial dysfunction, altered intercellular communication, telomere attrition, genomic instability, epigenetic alterations, stem cell exhaustion, and cellular senescence. These mechanisms are believed to contribute to the potential benefits of metformin in extending lifespan and improving healthspan.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Metformin is approved for type 2 diabetes mellitus, and aging does not appear in its FDA label, yet 19 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 40 publication(s), 1 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:35640743; PMID:41344575; PMID:41172231; NCT02432287 (PHASE4); NCT01765946 (PHASE4); NCT03309007 (PHASE3).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.862220000009984,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 137,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8333333333333334,
+    "error": null
+  },
+  {
+    "item_id": "metformin|aging|q2",
+    "predicted": "Based on the evidence provided, the registered clinical trial that studied metformin for aging is MILES (Metformin In Longevity Study).",
+    "gold": "19 registered trial(s) in this corpus study metformin for aging. The highest-phase records are: NCT02432287 - Metformin in Longevity Study (MILES). (phase PHASE4, completed); NCT01765946 - Metformin and Longevity Genes in Prediabetes (phase PHASE4, completed); NCT03309007 - A Double-Blind, Placebo-Controlled Trial of Anti-Aging, Pro-Autophagy Effects of Metformin (phase PHASE3, completed); NCT07475546 - Combination Gerotherapeutic Interventions for Healthspan Improvement (phase PHASE3, active_not_recruiting).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.4396200000774115,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 30,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7857142857142857,
+    "error": null
+  },
+  {
+    "item_id": "aspirin|colorectal_cancer_prevention|q1",
+    "predicted": "Yes, there is evidence that aspirin has an effect beyond its approved use, specifically in colorectal cancer prevention. The evidence highlights that aspirin has a potential use as a chemopreventive agent for colorectal cancer prevention. This is supported by the following points from the evidence:\n\n1. **Evidence from Epidemiological and Preclinical Studies**: The review highlights that NSAIDs (nonsteroidal anti-inflammatory drugs) have a chemopreventive effect on colorectal cancer and specifically in colorectal cancer. This review emphasizes the role of aspirin in colorectal cancer prevention and its potential use as a chemopreventive agent.\n\n2. **Evidence from Randomized Controlled Studies**: The evidence from randomized controlled studies assessing the efficacy of aspirin to prevent adenoma recurrence and reduce colorectal cancer incidence and mortality, as well as its gastrointestinal and cardiovascular side effects, supports the use of aspirin for colorectal cancer prevention.\n\n3. **Evidence from",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Aspirin is approved for pain, fever, antiplatelet therapy, and colorectal cancer prevention does not appear in its FDA label, yet 1 registered trial(s) study it for this indication (highest phase reached: PHASE3), alongside 24 publication(s), 2 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:35471507; PMID:27859394; PMID:39812338; NCT02125409 (PHASE3).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.0849330000346527,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9021739130434783,
+    "error": null
+  },
+  {
+    "item_id": "aspirin|colorectal_cancer_prevention|q2",
+    "predicted": "The evidence states that the Aspirin in Reducing Events in the Elderly (ASPREE) trial heightens the concern regarding aspirin use for colorectal cancer prevention in elderly subjects. This trial found that a 95-variant colorectal cancer polygenic risk score (PRS) failed to identify a subset of elderly individuals who could have benefited from aspirin preventive activity. Further research is needed to define predictive biomarkers of aspirin preventive activity.",
+    "gold": "1 registered trial(s) in this corpus study aspirin for colorectal cancer prevention. The highest-phase records are: NCT02125409 - Acetylsalicylic Acid and Colorectal Cancer Prevention: Exploring the Platelet Function of  (phase PHASE3, unknown).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.7100932999746874,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 92,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9591836734693877,
+    "error": null
+  },
+  {
+    "item_id": "aspirin|preeclampsia|q1",
+    "predicted": "Yes, there is evidence that aspirin has an effect beyond its approved use, specifically in preeclampsia. The evidence suggests that aspirin has a beneficial effect on reducing the incidence of preterm and term preeclampsia. Specifically, the meta-analysis of randomized controlled trials indicates that aspirin at a daily dosage of 150 mg, initiated before 16 weeks of gestational age, and given at night to a high-risk population, identified by a combined first trimester screening test, reduces the incidence of preterm preeclampsia by 62%. This reduction in the incidence of preterm preeclampsia is mainly due to a reduction in births before 32 weeks of gestational age with preeclampsia. The evidence also suggests that aspirin has a similar effect in subgroups according to different maternal characteristics, except for the presence of chronic hypertension, where no beneficial effect is evident.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Aspirin is approved for pain, fever, antiplatelet therapy, and preeclampsia does not appear in its FDA label, yet 16 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 27 publication(s), 10 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:38923439; PMID:37248299; PMID:36809321; NCT04908982 (PHASE4); NCT06468202 (PHASE4); NCT01352234 (PHASE4).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.090851500048302,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.927710843373494,
+    "error": null
+  },
+  {
+    "item_id": "aspirin|preeclampsia|q2",
+    "predicted": "To answer the question, I will analyze the evidence provided and identify the registered clinical trials that studied aspirin for preeclampsia.\n\n1. **Evidence 1:**\n   - **Title:** The role of aspirin dose on the prevention of preeclampsia and fetal growth restriction: systematic review and meta-analysis.\n   - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:** \n     - **Authors:**",
+    "gold": "16 registered trial(s) in this corpus study aspirin for preeclampsia. The highest-phase records are: NCT04908982 - Aspirin for the Prevention of Preeclampsia in Women With Stage 1 Hypertension (phase PHASE4, unknown); NCT06468202 - Effectiveness of Two Aspirin Doses for Prevention of Hypertensive Disorders of Pregnancy:  (phase PHASE4, recruiting); NCT01352234 - Comparison of Doses of Acetylsalicylic Acid in Women With Previous History of Preeclampsia (phase PHASE4, completed); NCT04158830 - Aspirin (ASA) Therapy and Preeclampsia Prevention (phase PHASE4, withdrawn).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.1044863000279292,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8367346938775511,
+    "error": null
+  },
+  {
+    "item_id": "colchicine|pericarditis|q1",
+    "predicted": "Yes, there is evidence that colchicine has an effect beyond its approved use, specifically in pericarditis. The evidence states that colchicine is effective for the treatment of recurrent pericarditis. However, it does not provide specific information about its use in pericarditis.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Colchicine is approved for gout, and pericarditis does not appear in its FDA label, yet 9 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 31 publication(s), 4 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:31610707; PMID:31733140; PMID:26461998; NCT00235079 (PHASE4); NCT04323280 (PHASE4); NCT05737680 (PHASE3).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.5713183999760076,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 61,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7916666666666666,
+    "error": null
+  },
+  {
+    "item_id": "colchicine|pericarditis|q2",
+    "predicted": "To answer this question, I'll analyze the evidence provided:\n\n1. Evidence 1: A randomized trial of colchicine for acute pericarditis. This trial shows that colchicine is effective for the treatment of recurrent pericarditis. However, it doesn't provide information about the use of colchicine during a first attack or in the prevention of recurrent symptoms.\n\n2. Evidence 2: A multicenter, double-blind trial. This trial shows that colchicine reduces the rate of symptom persistence at 72 hours (19.2% vs. 37.5% in the placebo group). It also shows that colchicine reduces the rate of recurrence of pericarditis (16.7% vs. 37.5% in the colchicine group).\n\n3. Evidence 3: Colchicine in cardiovascular medicine: Current perspectives on mechanisms and clinical therapeutics. This review synthesizes",
+    "gold": "9 registered trial(s) in this corpus study colchicine for pericarditis. The highest-phase records are: NCT00235079 - Study of Colchicine to Treat and Prevent Recurrent Pericarditis After Failure of Conventio (phase PHASE4, completed); NCT04323280 - Dexamethasone Compared to Non-steroidal Anti-inflammatory Drugs in the Treatment of Acute  (phase PHASE4, terminated); NCT05737680 - Hydroxychloroquine in Colchicine-Resistant Glucocorticoid-Dependent Idiopathic Recurrent P (phase PHASE3, unknown); NCT00128414 - Study of Colchicine to Treat and Prevent Recurrent Pericarditis (First Episode) (phase PHASE3, completed).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.1050763999810442,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8194444444444444,
+    "error": null
+  },
+  {
+    "item_id": "colchicine|coronary_artery_disease|q1",
+    "predicted": "Yes, there is evidence that colchicine has an effect beyond its approved use, specifically in coronary artery disease. The evidence suggests that colchicine may have a protective effect in patients with coronary artery disease. The meta-analysis of trials of colchicine in multiple cardiovascular diseases revealed a decrease in myocardial infarction with varying levels of evidence. This indicates that colchicine may have a protective effect in patients with coronary artery disease.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Colchicine is approved for gout, and coronary artery disease does not appear in its FDA label, yet 9 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 26 publication(s), 7 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40314333; PMID:41224205; PMID:40314334; NCT04382443 (PHASE4); NCT05850091 (PHASE4); NCT06280976 (PHASE4).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.6834505000151694,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 89,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9,
+    "error": null
+  },
+  {
+    "item_id": "colchicine|coronary_artery_disease|q2",
+    "predicted": "The evidence states that a randomized double-blind placebo-controlled cross-over intervention study was executed in patients with a history of myocardial infarction. This study aimed to unravel the effect of colchicine on monocyte and neutrophil phenotype and function.",
+    "gold": "9 registered trial(s) in this corpus study colchicine for coronary artery disease. The highest-phase records are: NCT04382443 - Oral Colchicine in Argentina to Prevent Restenosis (phase PHASE4, completed); NCT05850091 - Polygenic Risk-based Detection of Subclinical Coronary Atherosclerosis and Intervention Wi (phase PHASE4, active_not_recruiting); NCT06280976 - Aggressive Risk-Prevention Therapies for Coronary Atherosclerotic Plaque (ART-CAP) (phase PHASE4, withdrawn); NCT07349875 - Colchicine Treatment for Non-Flow-Limiting Coronary Plaque by Coronary CTA: A Randomized C (phase PHASE4, recruiting).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.5466288999887183,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 51,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9642857142857143,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|chronic_kidney_disease|q1",
+    "predicted": "Yes, there is evidence that allopurinol has an effect beyond its approved use in chronic kidney disease. The evidence suggests that allopurinol may have an effect on the progression of chronic kidney disease. Specifically, the evidence indicates that allopurinol may be associated with a decline in the estimated glomerular filtration rate (eGFR) in patients with chronic kidney disease who are at risk for progression. This effect was observed in small studies with varying results. Larger clinical trials are currently underway.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Allopurinol is approved for gout, hyperuricemia, and chronic kidney disease does not appear in its FDA label, yet 14 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 33 publication(s), 5 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40012480; PMID:38906504; PMID:38564654; NCT02579096 (PHASE4); NCT03226899 (PHASE4); NCT04983160 (PHASE2).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.7895988000091165,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 106,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9056603773584906,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|chronic_kidney_disease|q2",
+    "predicted": "To answer this question, I'll analyze the evidence provided:\n\n1. Evidence 1: Allopurinol and kidney function: An update. Allopurinol is the most commonly used urate lowering therapy in the management of gout. Despite the fact that it has been available for over 40 years, there is ongoing debate about optimal allopurinol dosing in gout patients with chronic kidney disease. Given that gout is common in patients with renal impairment, clinicians need to be aware of the relationships between serum urate and kidney function as well as the effects of allopurinol on kidney function and vice versa. The use of allopurinol in patients on dialysis is an understudied area. Dialysis reduces plasma oxypurinol concentrations, therefore the dose and time of administration in relationship to dialysis need to be carefully considered. Recently, it has been suggested that there may be",
+    "gold": "14 registered trial(s) in this corpus study allopurinol for chronic kidney disease. The highest-phase records are: NCT02579096 - CSP594 Comparative Effectiveness in Gout: Allopurinol vs. Febuxostat (phase PHASE4, completed); NCT03226899 - A Phase 4 Safety and Efficacy Study to Evaluate Lesinurad 200 mg in Participants With Gout (phase PHASE4, terminated); NCT04983160 - Crossover Clinical Trial, Randomized, Double Blind, Placebo Controlled Trial (phase PHASE2, completed); NCT03990363 - A Study of Verinurad and Allopurinol in Patients With Chronic Kidney Disease and Hyperuric (phase PHASE2, completed).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.079718399909325,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9545454545454546,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|cardiovascular_disease|q1",
+    "predicted": "Yes, there is evidence that allopurinol has an effect beyond its approved use in cardiovascular disease. According to evidence (2), allopurinol, a competitive xanthine oxidase inhibitor, in addition to reducing serum uric acid levels, can act as a free radical scavenger. This makes it a potential therapeutic option in cardiovascular disease.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Allopurinol is approved for gout, hyperuricemia, and cardiovascular disease does not appear in its FDA label, yet 4 registered trial(s) study it for this indication (highest phase reached: PHASE3), alongside 28 publication(s), 4 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40528737; PMID:39352584; PMID:33181081; NCT05943821 (PHASE3); NCT03680573 (PHASE1); NCT03680638 (PHASE1).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 2.592860499978997,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 74,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.90625,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|cardiovascular_disease|q2",
+    "predicted": "To answer the question, I'll analyze the evidence provided and identify the relevant clinical trial studies that examined allopurinol's role in cardiovascular disease.\n\n1. **Evidence 1**: The study \"Who had myocardial infarction or stroke in the previous 6 months or who had severe congestive heart failure or severe renal impairment were excluded. After a lead-in phase in which allopurinol dose was optimised towards achieving a serum urate concentration of less than 0.357 mmol/L (<6 mg/dL), patients were randomly assigned (1:1, with stratification according to previous cardiovascular events) to continue allopurinol (at the optimised dose) or start febuxostat at 80 mg/day, increasing to 120 mg/day if necessary to achieve the target serum urate concentration. The primary outcome was a composite of hospitalisation for non-fatal myocardial",
+    "gold": "4 registered trial(s) in this corpus study allopurinol for cardiovascular disease. The highest-phase records are: NCT05943821 - The Effect of Allopurinol on the Risk of Cardiovascular Events in Patients with Cardiovasc (phase PHASE3, recruiting); NCT03680573 - The Effect of Antioxidants on Skin Blood Flow-BH4 (phase PHASE1, completed); NCT03680638 - The Effect of Antioxidants on Skin Blood Flow During Local Heating (phase PHASE1, completed); NCT00281255 - Intravenous Allopurinol to Improve Heart Function in Individuals With Dilated Cardiomyopat (phase PHASE1|PHASE2, withdrawn).",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 3.0600774999475107,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 192,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9342105263157895,
+    "error": null
+  }
+]

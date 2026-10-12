@@ -1,0 +1,422 @@
+[
+  {
+    "item_id": "metformin|cancer",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 10.145897299982607,
+    "swaps": 1,
+    "swap_seconds": 5.833619600045495,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "metformin|polycystic_ovary_syndrome",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.1483454999979585,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "metformin|non-alcoholic_fatty_liver_disease",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.16645810008049,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "metformin|aging",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.396790999919176,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "aspirin|colorectal_cancer_prevention",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.401067900005728,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "aspirin|preeclampsia",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.40649080008734,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "colchicine|pericarditis",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.4182749999454245,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "colchicine|coronary_artery_disease",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.407488099997863,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|chronic_kidney_disease",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.418197299935855,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|cardiovascular_disease",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.3969413000158966,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "simvastatin|cancer",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.3975086000282317,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "simvastatin|sepsis",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.4093487999634817,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "simvastatin|multiple_sclerosis",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.3873250000178814,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "atorvastatin|cancer",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.4010335999773815,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "atorvastatin|contrast-induced_nephropathy",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.396940300008282,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "dapagliflozin|heart_failure",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.401682800031267,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "dapagliflozin|chronic_kidney_disease",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.3962098999181762,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|heart_failure",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.382309000007808,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|chronic_kidney_disease",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.405162399983965,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "liraglutide|obesity",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": true,
+    "confidence": 1.0,
+    "abstained": false,
+    "schema_valid": true,
+    "seconds": 2.392881599953398,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 1,
+    "output_tokens": 8,
+    "peak_vram_bytes": 481810185,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  }
+]

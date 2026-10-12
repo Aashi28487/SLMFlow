@@ -1,0 +1,35 @@
+{
+  "family": "repurposing_label",
+  "split": "train",
+  "n_items": 80,
+  "guarantee": "Precision(target=0.90, delta=0.10)",
+  "tuned_policy": null,
+  "guarantee_error": "No threshold on 40 calibration items meets precision 0.90 at delta=0.10: target 0.900, best achievable on the calibration split 0.000. Lower the target, add calibration data, or add a stronger model to the pool.",
+  "held_out_precision": null,
+  "held_out_coverage": null,
+  "guarantee_held": null,
+  "ece": 1.0,
+  "reliability_bins": [
+    {
+      "bin_low": 0.9,
+      "bin_high": 1.0,
+      "n": 80,
+      "mean_confidence": 1.0,
+      "mean_accuracy": 0.0,
+      "gap": 1.0
+    }
+  ],
+  "per_signal": {},
+  "empirical_coverage_at_target": null,
+  "risk_coverage_curve": [
+    {
+      "threshold": 1.0,
+      "coverage": 1.0,
+      "risk": 1.0
+    }
+  ],
+  "schema_valid_rate_with_grammar": 1.0,
+  "schema_valid_rate_without_grammar": 1.0,
+  "mock": false,
+  "caveat": "Measured on real local models; see benchmarks/results/model_cards.json."
+}
