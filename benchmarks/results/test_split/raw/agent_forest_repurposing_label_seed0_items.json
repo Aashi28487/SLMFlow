@@ -1,0 +1,422 @@
+[
+  {
+    "item_id": "allopurinol|chronic_kidney_disease|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 56.29531459999271,
+    "swaps": 3,
+    "swap_seconds": 13.871374200098217,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|cardiovascular_disease|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.5333333333333333,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 37.543124800082296,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|heart_failure|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.742629099986516,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 251,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|chronic_kidney_disease|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.859104500035755,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 255,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|rosacea|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.4666666666666667,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.98233719996642,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 251,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|abdominal_aortic_aneurysm|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 37.01547139999457,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|cancer|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.5333333333333333,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 37.03498480003327,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "cimetidine|colorectal_cancer|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "hypothesis",
+    "correct": false,
+    "confidence": 0.5333333333333333,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.82482270000037,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 251,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "zoledronic_acid|breast_cancer|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.571290499996394,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 248,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "zoledronic_acid|prostate_cancer|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.81124089995865,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "baricitinib|COVID-19|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.60440950002521,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 248,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "baricitinib|alopecia_areata|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "approved",
+    "correct": false,
+    "confidence": 0.4666666666666667,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.62176099990029,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 243,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "baricitinib|atopic_dermatitis|q1",
+    "predicted": "{\n  \"label\": \"hypothesis\"\n}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.3333333333333333,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.70075229997747,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 255,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "dexamethasone|COVID-19|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6666666666666666,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.94042680005077,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "dexamethasone|acute_respiratory_distress_syndrome|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.65232889994513,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 243,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "bevacizumab|age-related_macular_degeneration|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.886317100026645,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "bevacizumab|diabetic_macular_edema|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.82176469999831,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 251,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "sildenafil|pulmonary_arterial_hypertension|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.6,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.969082099967636,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "sildenafil|Raynaud_phenomenon|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "investigational",
+    "correct": false,
+    "confidence": 0.4666666666666667,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.75459200004116,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 251,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  },
+  {
+    "item_id": "sildenafil|Alzheimer_disease|q1",
+    "predicted": "{\"label\":\"investigational\"}",
+    "gold": "hypothesis",
+    "correct": false,
+    "confidence": 0.4,
+    "abstained": true,
+    "schema_valid": false,
+    "seconds": 36.83717890002299,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 247,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": null,
+    "error": null
+  }
+]

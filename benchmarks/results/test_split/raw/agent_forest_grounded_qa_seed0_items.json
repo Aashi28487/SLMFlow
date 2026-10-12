@@ -1,0 +1,422 @@
+[
+  {
+    "item_id": "allopurinol|chronic_kidney_disease|q1",
+    "predicted": "Based on the evidence provided, there is evidence that allopurinol has an effect beyond its approved use, specifically in chronic kidney disease. The evidence suggests that allopurinol has potential benefits beyond its dosing in gout patients with chronic kidney disease. Specifically:\n\n1. Allopurinol's impact on kidney function: The evidence indicates that allopurinol can affect kidney function in patients with chronic kidney disease. It has been suggested that allopurinol may have a role in patients with chronic kidney disease without gout.\n\n2. Relationship between serum urate and kidney function: The evidence suggests that serum urate levels are associated with kidney function decline in patients with chronic kidney disease. The use of allopurinol in patients with chronic kidney disease with a high serum urate level is also discussed.\n\n3. Observational studies: A recent observational study reported an association between serum urate and the decline in estimated",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Allopurinol is approved for gout, hyperuricemia, and chronic kidney disease does not appear in its FDA label, yet 14 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 33 publication(s), 5 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40012480; PMID:38906504; PMID:38564654; NCT02579096 (PHASE4); NCT03226899 (PHASE4); NCT04983160 (PHASE2).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 80.58461209991947,
+    "swaps": 3,
+    "swap_seconds": 17.42154390003998,
+    "generations": 15,
+    "output_tokens": 2590,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8952380952380953,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|chronic_kidney_disease|q2",
+    "predicted": "To answer the question, I'll analyze the evidence provided:\n\n1. Evidence 1 mentions that there is ongoing debate about optimal allopurinol dosing in gout patients with chronic kidney disease.\n2. Evidence 2 states that allopurinol on progression of kidney disease has been examined in small studies with varying results.\n3. Evidence 3 discusses the effects of allopurinol on the progression of chronic kidney disease.\n4. Evidence 4 mentions that patients with gout often have co-morbidities like cardiovascular disease, renal failure, and metabolic syndrome, which suggests that allopurinol might have potential benefits.\n5. Evidence 5 addresses the treatment of hyperuricemia in chronic kidney disease and recommends allopurinol as a potential therapy.\n\nBased on this analysis, evidence 5 clearly states that allopurinol is being studied for the prevention and progression of chronic kidney disease. Therefore,",
+    "gold": "14 registered trial(s) in this corpus study allopurinol for chronic kidney disease. The highest-phase records are: NCT02579096 - CSP594 Comparative Effectiveness in Gout: Allopurinol vs. Febuxostat (phase PHASE4, completed); NCT03226899 - A Phase 4 Safety and Efficacy Study to Evaluate Lesinurad 200 mg in Participants With Gout (phase PHASE4, terminated); NCT04983160 - Crossover Clinical Trial, Randomized, Double Blind, Placebo Controlled Trial (phase PHASE2, completed); NCT03990363 - A Study of Verinurad and Allopurinol in Patients With Chronic Kidney Disease and Hyperuric (phase PHASE2, completed).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 47.47876769991126,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1566,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7553191489361702,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|cardiovascular_disease|q1",
+    "predicted": "Yes, the evidence suggests that allopurinol has an effect beyond its approved use in cardiovascular disease. Specifically, it indicates that:\n\n1. Allopurinol can act as a free radical scavenger in addition to reducing serum uric acid levels.\n\n2. In a randomized controlled trial (RCT), allopurinol was shown to improve exercise capacity in patients with chronic stable angina compared to a placebo.\n\n3. A recent controlled trial found no benefit of allopurinol in patients with heart failure. \n\nThese findings suggest that allopurinol has cardioprotective effects beyond its approved use in cardiovascular disease.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Allopurinol is approved for gout, hyperuricemia, and cardiovascular disease does not appear in its FDA label, yet 4 registered trial(s) study it for this indication (highest phase reached: PHASE3), alongside 28 publication(s), 4 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40528737; PMID:39352584; PMID:33181081; NCT05943821 (PHASE3); NCT03680573 (PHASE1); NCT03680638 (PHASE1).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 54.822888800059445,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 2234,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8448275862068966,
+    "error": null
+  },
+  {
+    "item_id": "allopurinol|cardiovascular_disease|q2",
+    "predicted": "Based on the evidence provided, allopurinol was not registered for cardiovascular disease as a clinical trial. The evidence states that allopurinol was registered with the EU Clinical Trials Register (EudraCT 2011-001883-23) and ISRCTN (ISRCTN72443728), but it is now closed.",
+    "gold": "4 registered trial(s) in this corpus study allopurinol for cardiovascular disease. The highest-phase records are: NCT05943821 - The Effect of Allopurinol on the Risk of Cardiovascular Events in Patients with Cardiovasc (phase PHASE3, recruiting); NCT03680573 - The Effect of Antioxidants on Skin Blood Flow-BH4 (phase PHASE1, completed); NCT03680638 - The Effect of Antioxidants on Skin Blood Flow During Local Heating (phase PHASE1, completed); NCT00281255 - Intravenous Allopurinol to Improve Heart Function in Individuals With Dilated Cardiomyopat (phase PHASE1|PHASE2, withdrawn).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 51.22895190003328,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1794,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.9166666666666666,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|heart_failure|q1",
+    "predicted": "Yes, there is evidence that Empagliflozin has an effect beyond its approved use, specifically in heart failure. The evidence shows that Empagliflozin reduces the risk of heart failure outcomes in heart failure patients. Specifically, the results from Empagliflozin in Heart Failure with a Preserved Ejection Fraction (Fifth Evidence) indicate that the main effect was a lower risk of hospitalization for heart failure in the empagliflozin group. The effect was consistent in patients with or without diabetes, and the study showed that the primary outcome event occurred in 415 out of 2997 patients (13.8%) in the empagliflozin group and 511 out of 2991 patients (17.1%) in the placebo group (hazard ratio, 0.79; 95% confidence interval [CI], 0",
+    "gold": "No - this is not off-label use. Empagliflozin carries an FDA-labelled indication covering heart failure, so evidence in this area describes approved use rather than repurposing. Supporting records: PMID:40832702; PMID:39916475; PMID:41082889; NCT07631156 (PHASE4); NCT05989503 (PHASE4); NCT05305495 (PHASE4).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 55.5926984999096,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 2505,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8571428571428571,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|heart_failure|q2",
+    "predicted": "To answer this question, I'll analyze the evidence provided step by step:\n\n1. Evidence 1: The SGLT2 inhibitor empagliflozin in patients hospitalized for acute heart failure: A multinational randomized trial. This suggests that empagliflozin may be used in patients with heart failure, including those hospitalized for acute heart failure.\n\n2. Evidence 2: Empagliflozin in Patients With Heart Failure, Reduced Ejection Fraction, and Volume Overload: EMPEROR-Reduced Trial. This study compares the effects of empagliflozin and placebo in patients with heart failure, reduced ejection fraction, and volume overload. However, it does not support the claim that empagliflozin is specifically used for heart failure.\n\n3. Evidence 3: SGLT2 Inhibitors and Heart Failure with Preserved Ejection Fraction. Trials have shown that SGLT2 inhibitors have",
+    "gold": "21 registered trial(s) in this corpus study empagliflozin for heart failure. The highest-phase records are: NCT07631156 - STEPwise De-escalation and Optimizing Withdrawal of ARNI and SGLT2i in Normalized Heart Fa (phase PHASE4, not_yet_recruiting); NCT05989503 - Initiation of ARNi and SGLT2i in Patients With HFrEF (phase PHASE4, completed); NCT05305495 - Empagliflozin in Acute Heart Failure (phase PHASE4, completed); NCT06249945 - EMPAgliflozin in Heart Failure With PReserved Ejection Fraction and End Stage Renal Diseas (phase PHASE4, recruiting).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 56.30202509998344,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 2503,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7888888888888889,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|chronic_kidney_disease|q1",
+    "predicted": "Yes, there is evidence that empagliflozin has an effect beyond its approved use, specifically in chronic kidney disease.\n\nThe evidence states that empagliflozin reduced risk of kidney disease progression in patients with chronic kidney disease. Specifically, the key points are:\n\n1. Empagliflozin was used in the CONFIDENCE trial, which is a part of the CONFIDENCE (COmbinatioN effect of FInerenone anD EmpaglifloziN in participants with chronic kidney disease and type 2 diabetes using a UACR Endpoint) trial.\n2. The CONFIDENCE trial compared empagliflozin (an SGLT2i) with finerenone (an SGLT1i) and sodium-glucose cotransporter-2 inhibitors (SGLT2i) in patients with chronic kidney disease and type 2 diabetes.\n3. Empaglif",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Empagliflozin is approved for type 2 diabetes mellitus, and chronic kidney disease does not appear in its FDA label, yet 14 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 26 publication(s), 15 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40470996; PMID:39453837; PMID:39916475; NCT07547878 (PHASE4); NCT06110130 (PHASE4); NCT05305495 (PHASE4).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 55.49377719999757,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 2443,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8571428571428571,
+    "error": null
+  },
+  {
+    "item_id": "empagliflozin|chronic_kidney_disease|q2",
+    "predicted": "Based on the evidence provided, the registered clinical trial study that evaluates empagliflozin for chronic kidney disease is the CONFIDENCE trial. The CONFIDENCE trial is described in evidence [2] and has a focus on patients with chronic kidney disease (CKD) and type 2 diabetes. The study investigates the safety and efficacy of the combination of finerenone, an SGLT2 inhibitor, and empagliflozin in reducing kidney disease progression and improving kidney and cardiovascular outcomes.",
+    "gold": "14 registered trial(s) in this corpus study empagliflozin for chronic kidney disease. The highest-phase records are: NCT07547878 - Rapid and Simultaneous Initiation of Four Guideline-Directed CKD Therapies (RAPID-CKD) (phase PHASE4, not_yet_recruiting); NCT06110130 - Effect of Empagliflozin on Podocyte Specific Proteins in African American Veterans With ND (phase PHASE4, recruiting); NCT05305495 - Empagliflozin in Acute Heart Failure (phase PHASE4, completed); NCT07074418 - Effect of Empagliflozin in Patients With eGFR Between 10 and 20 ml/Min/1.73m2 (phase PHASE4, not_yet_recruiting).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 51.25843839999288,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1986,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8181818181818182,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|rosacea|q1",
+    "predicted": "Yes, the evidence suggests that doxycycline has an effect beyond its approved use in the treatment of rosacea. The article provides specific examples of how doxycycline is being used in off-label dermatologic uses, including:\n\n1. Dupilumab - The article mentions that dupilumab, an approved treatment for rosacea, is being used for certain off-label dermatologic uses beyond atopic dermatitis in dermatology.\n\n2. Dupilumab - The article notes that dupilumab, which inhibits the interleukin-4 receptor subunit \u03b1, is being used for various dermatologic conditions, including allergic contact dermatitis, hand dermatitis, chronic spontaneous urticaria, prurigo nodularis, and alopecia areata.\n\nWhile the evidence does not explicitly state that doxycycline has an effect beyond its approved use in rosacea, the article does mention that there is limited but",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Doxycycline is approved for bacterial infection, and rosacea does not appear in its FDA label, yet 20 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 26 publication(s), 6 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40042869; PMID:38243868; PMID:39475254; NCT00855595 (PHASE4); NCT01872715 (PHASE4); NCT00495313 (PHASE4).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 49.759963900083676,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 2065,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7951807228915663,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|rosacea|q2",
+    "predicted": "To determine which registered clinical trials study doxycycline for rosacea, I will analyze the evidence provided:\n\n1. **Evidence Analysis:**\n   - [1] discusses the use of topical metronidazole in the treatment of rosacea and other dermatologic uses in the literature.\n   - [2] outlines the characteristics of drug clinical trials for NASH treatment on the global clinical trials registry platform.\n   - [4] provides information about incretin dominance and emerging mechanisms in obesity pharmacotherapy.\n\n2. **Specific Evidence:**\n   - [4] states that \"There were 275 registered clinical trials with a total of 268 drug clinical trials that were included in the study. The majority of the trials were conducted in the United States (42.2%) and funded by industry (67.9%).\"\n   - [3] mentions that \"The current DMX pipeline in DLB with a focus",
+    "gold": "20 registered trial(s) in this corpus study doxycycline for rosacea. The highest-phase records are: NCT00855595 - Efficacy of Topical Azelaic Acid 15% Gel Plus Anti-inflammatory Dose Doxycycline or Metron (phase PHASE4, completed); NCT01872715 - Patient Centered Outcomes in Rosacea: An Exploratory Multi-media Analysis of the Patient E (phase PHASE4, completed); NCT00495313 - Safety and Efficacy Study to Compare Two Rosacea Treatment Regimens (phase PHASE4, completed); NCT05296837 - Ocular Rosacea Biome Study (phase PHASE4, active_not_recruiting).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 42.95093030005228,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1243,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8552631578947368,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|abdominal_aortic_aneurysm|q1",
+    "predicted": "Based on the evidence provided, there is no direct evidence that doxycycline (Dupilumab) has an effect beyond its approved use in abdominal aortic aneurysm. The evidence provided focuses on off-label uses of Dupilumab (doxycycline) for treating atopic dermatitis and other dermatological conditions. It does not discuss the effect of Dupilumab beyond its approved use for abdominal aortic aneurysm.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Doxycycline is approved for bacterial infection, and abdominal aortic aneurysm does not appear in its FDA label, yet 1 registered trial(s) study it for this indication (highest phase reached: PHASE2), alongside 25 publication(s), 6 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40966672; PMID:34695550; PMID:34930052; NCT01756833 (PHASE2).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 46.534837100072764,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1501,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7027027027027027,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|abdominal_aortic_aneurysm|q2",
+    "predicted": "To determine which registered clinical trial study uses doxycycline for abdominal aortic aneurysm, I'll carefully examine the evidence provided:\n\n1. **Evidence 1**: \"On the basis of the FDA approval of doxycycline for use in the treatment of non-alcoholic steatohepatitis (NASH), no U.S. Food and Drug Administration (FDA) approved drugs for treatment of NASH, the objective of this study is to examine fundamental characteristics of drug clinical trials for NASH treatment on the global clinical trials registry platform.\"\n   - This evidence mentions doxycycline as a treatment for NASH, which is relevant to the study but not directly about the FDA-approved drugs for NASH.\n\n2. **Evidence 2**: \"The objective of this study is to examine fundamental characteristics of drug clinical trials for NASH treatment on the global clinical trials registry platform.\"\n   - This evidence states the study's objective",
+    "gold": "1 registered trial(s) in this corpus study doxycycline for abdominal aortic aneurysm. The highest-phase records are: NCT01756833 - Non-Invasive Treatment of Abdominal Aortic Aneurysm Clinical Trial (phase PHASE2, completed).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 44.18308800004888,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1256,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8170731707317073,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|cancer|q1",
+    "predicted": "No, the evidence does not support the claim that doxycycline has an effect beyond its approved use in cancer. The evidence indicates that doxycycline is used for off-label indications and claims that it has a weak evidence for these off-label indications.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Doxycycline is approved for bacterial infection, and cancer does not appear in its FDA label, yet 14 registered trial(s) study it for this indication (highest phase reached: PHASE3), alongside 44 publication(s), 0 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:42479152; PMID:41856464; PMID:41174038; NCT02201381 (PHASE3); NCT00002872 (PHASE3); NCT01465802 (PHASE2).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 43.15265089995228,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1138,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7916666666666666,
+    "error": null
+  },
+  {
+    "item_id": "doxycycline|cancer|q2",
+    "predicted": "To determine which registered clinical trials study doxycycline for cancer, I'll focus on evidence [4] and [5]. According to evidence [4], the study \"Incretin Dominance and Emerging Mechanisms in Obesity Pharmacotherapy: Insights from 275 Registered Clinical Trials (2019-2024)\" focused on pharmacological interventions for obesity from early exploratory stages to Phase 3, including doxycycline.\n\nEvidence [5] also mentions that doxycycline has the potential to be repurposed as anticancer drugs for cancer prevention and therapy. Therefore, the registered clinical trials that study doxycycline for cancer are those that explore its use in cancer treatment.\n\nSince the evidence supports that evidence [4] and evidence [5] both focus on the study of doxycycline for cancer, the answer is:\n\nThe registered clinical trials study doxycycline for",
+    "gold": "14 registered trial(s) in this corpus study doxycycline for cancer. The highest-phase records are: NCT02201381 - Study of the Safety, Tolerability and Efficacy of Metabolic Combination Treatments on Canc (phase PHASE3, withdrawn); NCT00002872 - Bleomycin, Doxycycline, or Talc in Treating Patients With Malignant Pleural Effusions (phase PHASE3, completed); NCT01465802 - Study Of Dacomitinib (PF-00299804) In Advanced NSCLC Patients (Post Chemo Or Select First  (phase PHASE2, completed); NCT00531934 - A Study of Management of Tarceva - Induced Rash in Patients With Non-Small Cell Lung Cance (phase PHASE2, completed).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 43.293859499972314,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1115,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8734177215189873,
+    "error": null
+  },
+  {
+    "item_id": "cimetidine|colorectal_cancer|q1",
+    "predicted": "Yes, there is evidence that cimetidine has an effect beyond its approved use, specifically in colorectal cancer. The evidence highlights its potential chemopreventive effects on colorectal cancer and adjuvant treatment in colorectal cancer patients.",
+    "gold": "Only preliminary. Cimetidine is approved for gastroesophageal reflux, peptic ulcer; colorectal cancer is absent from its FDA label and this corpus contains no registered trial for that indication. 25 publication(s) discuss the link (10 trial- or review-grade), so the claim is a literature hypothesis, not clinical evidence. Citations: PMID:38592456; PMID:38951433; PMID:22895966.",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 43.73099379998166,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1292,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8636363636363636,
+    "error": null
+  },
+  {
+    "item_id": "zoledronic_acid|breast_cancer|q1",
+    "predicted": "Yes, the evidence supports the use of zoledronic acid in breast cancer. The evidence states that zoledronic acid has shown potential as a generic therapy for all breast cancer subtypes. However, it notes that several limitations and challenges still need to be addressed to fully implement it as a repurposed effective chemotherapeutic for breast cancer. The review does not provide specific data to support the efficacy and safety of zoledronic acid specifically in breast cancer, but the evidence suggests that it has the potential to be a useful treatment for this disease.",
+    "gold": "Yes - there is registered clinical evidence beyond the approved label. Zoledronic acid is approved for osteoporosis, skeletal-related events, and breast cancer does not appear in its FDA label, yet 21 registered trial(s) study it for this indication (highest phase reached: PHASE4), alongside 30 publication(s), 4 of them trial- or review-grade. This is investigational, not approved use. Citations: PMID:40902303; PMID:41110337; PMID:22975218; NCT04549207 (PHASE4); NCT01129336 (PHASE4); NCT00172029 (PHASE4).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 43.69640359992627,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1238,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.6727272727272727,
+    "error": null
+  },
+  {
+    "item_id": "zoledronic_acid|breast_cancer|q2",
+    "predicted": "Based on the evidence provided, the registered clinical trial that studied zoledronic acid for breast cancer is:\n\n[3] Off-label use of oxaliplatin in patients with metastatic breast cancer.\n\nThis trial specifically addressed the use of oxaliplatin in metastatic breast cancer patients, which is relevant to the evidence on the use of zoledronic acid in breast cancer. However, the evidence also notes that the off-label use of oxaliplatin in patients with metastatic breast cancer is not widely supported, with the primary reason being that the results in metastatic breast cancer were not as promising as in other settings.",
+    "gold": "21 registered trial(s) in this corpus study zoledronic acid for breast cancer. The highest-phase records are: NCT04549207 - Comparing Continuation or De-escalation of Bone Modifying Agents (BMA) in Patients Treated (phase PHASE4, active_not_recruiting); NCT01129336 - Effect of Zoledronic Acid as Anti-Cancer Treatment in Metastatic Breast Cancer Patients (phase PHASE4, completed); NCT00172029 - Study Comparing Full-dose Radiotherapy Versus Reduced Dose in the Management of Bone Metas (phase PHASE4, completed); NCT00334139 - Effect of Zoledronic Acid on Bone Metabolism in Patients With Bone Metastasis and Prostate (phase PHASE4, completed).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 42.925228900043294,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1179,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7419354838709677,
+    "error": null
+  },
+  {
+    "item_id": "zoledronic_acid|prostate_cancer|q1",
+    "predicted": "Yes, the evidence supports the use of zoledronic acid (zoledronic acid) beyond its approved use in prostate cancer. The evidence states that zoledronic acid is used in the following ways:\n\n1. Administration: It is used to treat prostate cancer.\n\n2. Role in prostate cancer: Zoledronic acid has been shown to be used for the treatment of prostate cancer.\n3. Potential in other conditions: While not indicated, zoledronic acid has shown promise in other conditions, such as other cancers and metabolic disorders.\n\nThe evidence suggests that while zoledronic acid is primarily indicated for the treatment of prostate cancer, it can be used in other contexts, including metabolic disorders, to treat other cancers.",
+    "gold": "No - this is not off-label use. Zoledronic acid carries an FDA-labelled indication covering prostate cancer, so evidence in this area describes approved use rather than repurposing. Supporting records: PMID:40450503; PMID:40467357; PMID:35866376; NCT04549207 (PHASE4); NCT00035997 (PHASE4); NCT00242554 (PHASE4).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 50.86669640010223,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 2099,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.5,
+    "error": null
+  },
+  {
+    "item_id": "zoledronic_acid|prostate_cancer|q2",
+    "predicted": "To answer this question, I'll analyze the evidence provided:\n\n1. The evidence states: \"Objective: Based on a literature review, we propose the PaSTe regimen (Pantoprazole, Simvastatin, Trimetazidine) as a metabolic therapy for prostate cancer.\"\n\n2. It also mentions that the study is based on:\n\n   a. A literature review\n   b. The PaSTe regimen\n\nTherefore, the PaSTe regimen (Pantoprazole, Simvastatin, Trimetazidine) has been studied for prostate cancer.\n\nAnswer: The PaSTe regimen (Pantoprazole, Simvastatin, Trimetazidine) was studied for prostate cancer in the provided evidence.",
+    "gold": "18 registered trial(s) in this corpus study zoledronic acid for prostate cancer. The highest-phase records are: NCT04549207 - Comparing Continuation or De-escalation of Bone Modifying Agents (BMA) in Patients Treated (phase PHASE4, active_not_recruiting); NCT00035997 - Open-label Trial on the Effect of I.V. Zoledronic Acid 4 mg on Bone Density in Hormone Sen (phase PHASE4, completed); NCT00242554 - Open-label Phase IV Clinical Trial to Evaluate the Safety and Tolerability of Zoledronic A (phase PHASE4, completed); NCT00063609 - The Effect of Zoledronic Acid on Bone Loss in Prostate Cancer Patients Undergoing Androgen (phase PHASE4, completed).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 42.136910599889234,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1035,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.7115384615384616,
+    "error": null
+  },
+  {
+    "item_id": "baricitinib|COVID-19|q1",
+    "predicted": "Yes, the evidence indicates that baricitinib has an effect beyond its approved use, specifically in treating COVID-19. The review article states that baricitinib is effective in treating a variety of dermatological conditions, including alopecia areata, rheumatoid arthritis, and COVID-19. Therefore, it is safe to assume that baricitinib has the potential to have an effect beyond its approved use in treating COVID-19.",
+    "gold": "No - this is not off-label use. Baricitinib carries an FDA-labelled indication covering COVID-19, so evidence in this area describes approved use rather than repurposing. Supporting records: PMID:37977159; PMID:36855020; PMID:37353137; NCT04970719 (PHASE3); NCT05056558 (PHASE3); NCT04401579 (PHASE3).",
+    "correct": true,
+    "confidence": 0.06666666666666667,
+    "abstained": false,
+    "schema_valid": null,
+    "seconds": 49.422570499940775,
+    "swaps": 0,
+    "swap_seconds": 0.0,
+    "generations": 15,
+    "output_tokens": 1734,
+    "peak_vram_bytes": 4202755519,
+    "peak_ram_bytes": 0,
+    "models_used": [
+      "qwen2.5:0.5b-instruct-q4_K_M"
+    ],
+    "groundedness": 0.8157894736842105,
+    "error": null
+  }
+]

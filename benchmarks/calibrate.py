@@ -123,7 +123,13 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         registry = build_registry(mock=True, cards=args.cards)
     else:
+        from slmflow.models.backends import get_backend
+
         registry = ModelRegistry.from_file(args.cards)
+        # Register backends for every unique backend name in the loaded cards
+        for card in registry:
+            if card.backend not in registry._backends:
+                registry.register_backend(card.backend, get_backend(card.backend))
     budget = MemoryBudget.from_device(probe().card)
 
     with_grammar = _collect(

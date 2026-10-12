@@ -1,11 +1,12 @@
 {
   "budget": {
     "vram_bytes": 4829478912,
-    "ram_bytes": 1926825984
+    "ram_bytes": 4077053952
   },
   "models": [
-    "qwen2.5:0.5b",
-    "llama3.2:3b"
+    "qwen2.5:0.5b-instruct-q4_K_M",
+    "qwen2.5:1.5b-instruct-q4_K_M",
+    "llama3.2:3b-instruct-q4_K_M"
   ],
   "unprofiled_models": [],
   "lambda_cost": 0.01,
@@ -13,43 +14,11 @@
     {
       "n_steps": 2,
       "shape": "independent",
-      "n_models": 2,
+      "n_models": 3,
       "greedy": {
         "planner": "greedy_swap_aware",
-        "loads": 2,
-        "seconds": 180.50002497677417,
-        "quality": null,
-        "peak_vram_bytes": 3036518807,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s1",
-          "s0"
-        ],
-        "assignment": {
-          "s1": "llama3.2:3b",
-          "s0": "qwen2.5:0.5b"
-        }
-      },
-      "greedy_no_grouping": {
-        "planner": "greedy_swap_aware",
-        "loads": 2,
-        "seconds": 180.50002497677417,
-        "quality": null,
-        "peak_vram_bytes": 3036518807,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s0",
-          "s1"
-        ],
-        "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "llama3.2:3b"
-        }
-      },
-      "naive_lru": {
-        "planner": "naive_lru",
         "loads": 1,
-        "seconds": 163.48486154199261,
+        "seconds": 123.4762932151789,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -58,30 +27,62 @@
           "s1"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "greedy_no_grouping": {
+        "planner": "greedy_swap_aware",
+        "loads": 1,
+        "seconds": 123.4762932151789,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "naive_lru": {
+        "planner": "naive_lru",
+        "loads": 1,
+        "seconds": 123.4762932151789,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "oracle": null,
       "oracle_skipped": "Oracle found no feasible, fully-profiled schedule. Every candidate model must have measured accuracy and cost for the objective to be defined; run Phase 2a profiling first.",
       "ablation_swap_awareness": {
-        "greedy_loads": 2,
+        "greedy_loads": 1,
         "naive_loads": 1,
-        "loads_saved": -1,
-        "greedy_seconds": 180.50002497677417,
-        "naive_seconds": 163.48486154199261,
-        "seconds_saved": -17.015163434781556,
+        "loads_saved": 0,
+        "greedy_seconds": 123.4762932151789,
+        "naive_seconds": 123.4762932151789,
+        "seconds_saved": 0.0,
         "grouping_loads_saved": 0
       }
     },
     {
       "n_steps": 2,
       "shape": "chain",
-      "n_models": 2,
+      "n_models": 3,
       "greedy": {
         "planner": "greedy_swap_aware",
         "loads": 1,
-        "seconds": 163.48486154199261,
+        "seconds": 123.4762932151789,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -90,14 +91,14 @@
           "s1"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "greedy_no_grouping": {
         "planner": "greedy_swap_aware",
         "loads": 1,
-        "seconds": 163.48486154199261,
+        "seconds": 123.4762932151789,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -106,14 +107,14 @@
           "s1"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "naive_lru": {
         "planner": "naive_lru",
         "loads": 1,
-        "seconds": 163.48486154199261,
+        "seconds": 123.4762932151789,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -122,8 +123,8 @@
           "s1"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "oracle": null,
@@ -132,8 +133,8 @@
         "greedy_loads": 1,
         "naive_loads": 1,
         "loads_saved": 0,
-        "greedy_seconds": 163.48486154199261,
-        "naive_seconds": 163.48486154199261,
+        "greedy_seconds": 123.4762932151789,
+        "naive_seconds": 123.4762932151789,
         "seconds_saved": 0.0,
         "grouping_loads_saved": 0
       }
@@ -141,47 +142,11 @@
     {
       "n_steps": 3,
       "shape": "independent",
-      "n_models": 2,
+      "n_models": 3,
       "greedy": {
         "planner": "greedy_swap_aware",
-        "loads": 2,
-        "seconds": 243.7227870825319,
-        "quality": null,
-        "peak_vram_bytes": 3036518807,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s1",
-          "s2",
-          "s0"
-        ],
-        "assignment": {
-          "s1": "llama3.2:3b",
-          "s2": "llama3.2:3b",
-          "s0": "qwen2.5:0.5b"
-        }
-      },
-      "greedy_no_grouping": {
-        "planner": "greedy_swap_aware",
-        "loads": 2,
-        "seconds": 243.7227870825319,
-        "quality": null,
-        "peak_vram_bytes": 3036518807,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s0",
-          "s1",
-          "s2"
-        ],
-        "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "llama3.2:3b",
-          "s2": "llama3.2:3b"
-        }
-      },
-      "naive_lru": {
-        "planner": "naive_lru",
         "loads": 1,
-        "seconds": 225.8639637129922,
+        "seconds": 183.5769944727654,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -191,49 +156,15 @@
           "s2"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b"
-        }
-      },
-      "oracle": null,
-      "oracle_skipped": "Oracle found no feasible, fully-profiled schedule. Every candidate model must have measured accuracy and cost for the objective to be defined; run Phase 2a profiling first.",
-      "ablation_swap_awareness": {
-        "greedy_loads": 2,
-        "naive_loads": 1,
-        "loads_saved": -1,
-        "greedy_seconds": 243.7227870825319,
-        "naive_seconds": 225.8639637129922,
-        "seconds_saved": -17.85882336953972,
-        "grouping_loads_saved": 0
-      }
-    },
-    {
-      "n_steps": 3,
-      "shape": "chain",
-      "n_models": 2,
-      "greedy": {
-        "planner": "greedy_swap_aware",
-        "loads": 1,
-        "seconds": 225.8639637129922,
-        "quality": null,
-        "peak_vram_bytes": 481810185,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s0",
-          "s1",
-          "s2"
-        ],
-        "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "greedy_no_grouping": {
         "planner": "greedy_swap_aware",
         "loads": 1,
-        "seconds": 225.8639637129922,
+        "seconds": 183.5769944727654,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -243,15 +174,15 @@
           "s2"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "naive_lru": {
         "planner": "naive_lru",
         "loads": 1,
-        "seconds": 225.8639637129922,
+        "seconds": 183.5769944727654,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -261,9 +192,9 @@
           "s2"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "oracle": null,
@@ -272,8 +203,78 @@
         "greedy_loads": 1,
         "naive_loads": 1,
         "loads_saved": 0,
-        "greedy_seconds": 225.8639637129922,
-        "naive_seconds": 225.8639637129922,
+        "greedy_seconds": 183.5769944727654,
+        "naive_seconds": 183.5769944727654,
+        "seconds_saved": 0.0,
+        "grouping_loads_saved": 0
+      }
+    },
+    {
+      "n_steps": 3,
+      "shape": "chain",
+      "n_models": 3,
+      "greedy": {
+        "planner": "greedy_swap_aware",
+        "loads": 1,
+        "seconds": 183.5769944727654,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1",
+          "s2"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "greedy_no_grouping": {
+        "planner": "greedy_swap_aware",
+        "loads": 1,
+        "seconds": 183.5769944727654,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1",
+          "s2"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "naive_lru": {
+        "planner": "naive_lru",
+        "loads": 1,
+        "seconds": 183.5769944727654,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1",
+          "s2"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "oracle": null,
+      "oracle_skipped": "Oracle found no feasible, fully-profiled schedule. Every candidate model must have measured accuracy and cost for the objective to be defined; run Phase 2a profiling first.",
+      "ablation_swap_awareness": {
+        "greedy_loads": 1,
+        "naive_loads": 1,
+        "loads_saved": 0,
+        "greedy_seconds": 183.5769944727654,
+        "naive_seconds": 183.5769944727654,
         "seconds_saved": 0.0,
         "grouping_loads_saved": 0
       }
@@ -281,51 +282,11 @@
     {
       "n_steps": 4,
       "shape": "independent",
-      "n_models": 2,
+      "n_models": 3,
       "greedy": {
         "planner": "greedy_swap_aware",
-        "loads": 2,
-        "seconds": 306.94554918828965,
-        "quality": null,
-        "peak_vram_bytes": 3036518807,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s1",
-          "s2",
-          "s3",
-          "s0"
-        ],
-        "assignment": {
-          "s1": "llama3.2:3b",
-          "s2": "llama3.2:3b",
-          "s3": "llama3.2:3b",
-          "s0": "qwen2.5:0.5b"
-        }
-      },
-      "greedy_no_grouping": {
-        "planner": "greedy_swap_aware",
-        "loads": 2,
-        "seconds": 306.94554918828965,
-        "quality": null,
-        "peak_vram_bytes": 3036518807,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s0",
-          "s1",
-          "s2",
-          "s3"
-        ],
-        "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "llama3.2:3b",
-          "s2": "llama3.2:3b",
-          "s3": "llama3.2:3b"
-        }
-      },
-      "naive_lru": {
-        "planner": "naive_lru",
         "loads": 1,
-        "seconds": 288.24306588399173,
+        "seconds": 243.67769573035187,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -336,52 +297,16 @@
           "s3"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b",
-          "s3": "qwen2.5:0.5b"
-        }
-      },
-      "oracle": null,
-      "oracle_skipped": "Oracle found no feasible, fully-profiled schedule. Every candidate model must have measured accuracy and cost for the objective to be defined; run Phase 2a profiling first.",
-      "ablation_swap_awareness": {
-        "greedy_loads": 2,
-        "naive_loads": 1,
-        "loads_saved": -1,
-        "greedy_seconds": 306.94554918828965,
-        "naive_seconds": 288.24306588399173,
-        "seconds_saved": -18.702483304297914,
-        "grouping_loads_saved": 0
-      }
-    },
-    {
-      "n_steps": 4,
-      "shape": "chain",
-      "n_models": 2,
-      "greedy": {
-        "planner": "greedy_swap_aware",
-        "loads": 1,
-        "seconds": 288.24306588399173,
-        "quality": null,
-        "peak_vram_bytes": 481810185,
-        "peak_ram_bytes": 0,
-        "order": [
-          "s0",
-          "s1",
-          "s2",
-          "s3"
-        ],
-        "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b",
-          "s3": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s3": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "greedy_no_grouping": {
         "planner": "greedy_swap_aware",
         "loads": 1,
-        "seconds": 288.24306588399173,
+        "seconds": 243.67769573035187,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -392,16 +317,16 @@
           "s3"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b",
-          "s3": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s3": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "naive_lru": {
         "planner": "naive_lru",
         "loads": 1,
-        "seconds": 288.24306588399173,
+        "seconds": 243.67769573035187,
         "quality": null,
         "peak_vram_bytes": 481810185,
         "peak_ram_bytes": 0,
@@ -412,10 +337,10 @@
           "s3"
         ],
         "assignment": {
-          "s0": "qwen2.5:0.5b",
-          "s1": "qwen2.5:0.5b",
-          "s2": "qwen2.5:0.5b",
-          "s3": "qwen2.5:0.5b"
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s3": "qwen2.5:0.5b-instruct-q4_K_M"
         }
       },
       "oracle": null,
@@ -424,8 +349,84 @@
         "greedy_loads": 1,
         "naive_loads": 1,
         "loads_saved": 0,
-        "greedy_seconds": 288.24306588399173,
-        "naive_seconds": 288.24306588399173,
+        "greedy_seconds": 243.67769573035187,
+        "naive_seconds": 243.67769573035187,
+        "seconds_saved": 0.0,
+        "grouping_loads_saved": 0
+      }
+    },
+    {
+      "n_steps": 4,
+      "shape": "chain",
+      "n_models": 3,
+      "greedy": {
+        "planner": "greedy_swap_aware",
+        "loads": 1,
+        "seconds": 243.67769573035187,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s3": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "greedy_no_grouping": {
+        "planner": "greedy_swap_aware",
+        "loads": 1,
+        "seconds": 243.67769573035187,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s3": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "naive_lru": {
+        "planner": "naive_lru",
+        "loads": 1,
+        "seconds": 243.67769573035187,
+        "quality": null,
+        "peak_vram_bytes": 481810185,
+        "peak_ram_bytes": 0,
+        "order": [
+          "s0",
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "assignment": {
+          "s0": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s1": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s2": "qwen2.5:0.5b-instruct-q4_K_M",
+          "s3": "qwen2.5:0.5b-instruct-q4_K_M"
+        }
+      },
+      "oracle": null,
+      "oracle_skipped": "Oracle found no feasible, fully-profiled schedule. Every candidate model must have measured accuracy and cost for the objective to be defined; run Phase 2a profiling first.",
+      "ablation_swap_awareness": {
+        "greedy_loads": 1,
+        "naive_loads": 1,
+        "loads_saved": 0,
+        "greedy_seconds": 243.67769573035187,
+        "naive_seconds": 243.67769573035187,
         "seconds_saved": 0.0,
         "grouping_loads_saved": 0
       }

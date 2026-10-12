@@ -1,6 +1,6 @@
 [
   {
-    "model_id": "qwen2.5:0.5b",
+    "model_id": "qwen2.5:0.5b-instruct-q4_K_M",
     "backend": "ollama",
     "params_b": 0.5,
     "quantisation": "Q4_K_M",
@@ -10,22 +10,47 @@
       "ram_bytes": 0,
       "disk_bytes": 0
     },
-    "cold_load_s": 38.7266571999935,
-    "warm_load_s": 4.380212500022026,
-    "tokens_per_s": 1.3191230944643098,
-    "prefill_tokens_per_s": 18.467723322500337,
+    "cold_load_s": 3.274890700005926,
+    "warm_load_s": 3.290993900038302,
+    "tokens_per_s": 1.3691306850654659,
+    "prefill_tokens_per_s": 19.167829590916522,
     "context_tokens": 2048,
     "supports_grammar": false,
     "supports_logprobs": false,
     "accuracy_by_task": {
-      "classify": 0.8
+      "classify": 0.7
     },
     "measured_on_device": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel / NVIDIA GeForce RTX 4050 Laptop GPU / 17GB RAM",
-    "measured_at": "2026-09-12T18:23:54+00:00",
+    "measured_at": "2026-10-11T08:44:02+00:00",
     "notes": "profiled by benchmarks/profile_models.py; repeats=5, slice=20, n_ctx=2048, n_gpu_layers=-1"
   },
   {
-    "model_id": "llama3.2:3b",
+    "model_id": "qwen2.5:1.5b-instruct-q4_K_M",
+    "backend": "ollama",
+    "params_b": 1.5,
+    "quantisation": "Q4_K_M",
+    "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+    "footprint": {
+      "vram_bytes": 1166236712,
+      "ram_bytes": 0,
+      "disk_bytes": 0
+    },
+    "cold_load_s": 5.378758699982427,
+    "warm_load_s": 5.347648499999195,
+    "tokens_per_s": 0.9160445197496715,
+    "prefill_tokens_per_s": 19.236934914743102,
+    "context_tokens": 2048,
+    "supports_grammar": false,
+    "supports_logprobs": false,
+    "accuracy_by_task": {
+      "classify": 0.0
+    },
+    "measured_on_device": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel / NVIDIA GeForce RTX 4050 Laptop GPU / 17GB RAM",
+    "measured_at": "2026-10-11T08:45:25+00:00",
+    "notes": "profiled by benchmarks/profile_models.py; repeats=5, slice=20, n_ctx=2048, n_gpu_layers=-1"
+  },
+  {
+    "model_id": "llama3.2:3b-instruct-q4_K_M",
     "backend": "ollama",
     "params_b": 3.0,
     "quantisation": "Q4_K_M",
@@ -35,10 +60,10 @@
       "ram_bytes": 0,
       "disk_bytes": 0
     },
-    "cold_load_s": 16.17150350002339,
-    "warm_load_s": 5.311924100009492,
-    "tokens_per_s": 1.3319653161455338,
-    "prefill_tokens_per_s": 16.871560671176763,
+    "cold_load_s": 5.679011099971831,
+    "warm_load_s": 5.535032600047998,
+    "tokens_per_s": 1.3592193949209386,
+    "prefill_tokens_per_s": 17.21677900233189,
     "context_tokens": 2048,
     "supports_grammar": false,
     "supports_logprobs": false,
@@ -46,7 +71,7 @@
       "classify": 0.2
     },
     "measured_on_device": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel / NVIDIA GeForce RTX 4050 Laptop GPU / 17GB RAM",
-    "measured_at": "2026-09-12T18:29:16+00:00",
+    "measured_at": "2026-10-11T08:46:50+00:00",
     "notes": "profiled by benchmarks/profile_models.py; repeats=5, slice=20, n_ctx=2048, n_gpu_layers=-1"
   }
 ]

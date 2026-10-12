@@ -3,57 +3,66 @@
   "split": "train",
   "n_items": 60,
   "models": [
-    "qwen2.5:0.5b",
-    "llama3.2:3b"
+    "qwen2.5:0.5b-instruct-q4_K_M",
+    "qwen2.5:1.5b-instruct-q4_K_M",
+    "llama3.2:3b-instruct-q4_K_M"
   ],
   "rows": [
     {
       "router": "learned",
-      "router_accuracy": 0.0,
-      "oracle_accuracy": 0.0,
+      "router_accuracy": 0.0667,
+      "oracle_accuracy": 0.0667,
       "regret": 0.0,
-      "relative_regret": null,
+      "relative_regret": 0.0,
       "n": 60
     },
     {
       "router": "heuristic",
       "router_accuracy": 0.0,
-      "oracle_accuracy": 0.0,
-      "regret": 0.0,
-      "relative_regret": null,
+      "oracle_accuracy": 0.0667,
+      "regret": 0.0667,
+      "relative_regret": 1.0,
       "n": 60
     },
     {
       "router": "random",
-      "router_accuracy": 0.0,
-      "oracle_accuracy": 0.0,
-      "regret": 0.0,
-      "relative_regret": null,
+      "router_accuracy": 0.0333,
+      "oracle_accuracy": 0.0667,
+      "regret": 0.0333,
+      "relative_regret": 0.5,
       "n": 60
     },
     {
-      "router": "static:qwen2.5:0.5b",
+      "router": "static:qwen2.5:0.5b-instruct-q4_K_M",
       "router_accuracy": 0.0,
-      "oracle_accuracy": 0.0,
-      "regret": 0.0,
-      "relative_regret": null,
+      "oracle_accuracy": 0.0667,
+      "regret": 0.0667,
+      "relative_regret": 1.0,
       "n": 60
     },
     {
-      "router": "static:llama3.2:3b",
-      "router_accuracy": 0.0,
-      "oracle_accuracy": 0.0,
+      "router": "static:qwen2.5:1.5b-instruct-q4_K_M",
+      "router_accuracy": 0.0667,
+      "oracle_accuracy": 0.0667,
       "regret": 0.0,
-      "relative_regret": null,
+      "relative_regret": 0.0,
+      "n": 60
+    },
+    {
+      "router": "static:llama3.2:3b-instruct-q4_K_M",
+      "router_accuracy": 0.0,
+      "oracle_accuracy": 0.0667,
+      "regret": 0.0667,
+      "relative_regret": 1.0,
       "n": 60
     }
   ],
   "train_report": {
-    "n_examples": 120,
-    "n_models": 2,
+    "n_examples": 180,
+    "n_models": 3,
     "epochs": 300,
-    "final_loss": 0.00623,
-    "train_accuracy": 1.0,
+    "final_loss": 0.21364,
+    "train_accuracy": 0.9722,
     "holdout_accuracy": 1.0
   },
   "note": "With --split train the router is evaluated on the slice it was trained on. Run --split test for a held-out number before citing it anywhere."
