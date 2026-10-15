@@ -7,14 +7,36 @@ the model to reproduce a fixed answer template.
 
 from __future__ import annotations
 
+import importlib.util
+
 import pytest
 
-from benchmarks.harness import GROUNDED_THRESHOLD, _score_item
-from benchmarks.tasks import BenchmarkItem, TaskFamily
-from slmflow.errors import BackendUnavailable
-from slmflow.models.backends import get_backend
-from slmflow.models.backends.mock import MockBackend
-from slmflow.types import TaskType
+
+def _benchmarks_available() -> bool:
+    """True when the repository's ``benchmarks`` package can be found.
+
+    The package is not part of the wheel or the source distribution, so these
+    tests only make sense in a source checkout. Only "not found" is treated as
+    absence: if the package exists but fails to import, that error propagates.
+    """
+    try:
+        return importlib.util.find_spec("benchmarks.harness") is not None
+    except ModuleNotFoundError:
+        return False
+
+
+if not _benchmarks_available():
+    pytest.skip(
+        "the 'benchmarks' package is not present (running outside a source checkout)",
+        allow_module_level=True,
+    )
+
+from benchmarks.harness import GROUNDED_THRESHOLD, _score_item  # noqa: E402
+from benchmarks.tasks import BenchmarkItem, TaskFamily  # noqa: E402
+from slmflow.errors import BackendUnavailable  # noqa: E402
+from slmflow.models.backends import get_backend  # noqa: E402
+from slmflow.models.backends.mock import MockBackend  # noqa: E402
+from slmflow.types import TaskType  # noqa: E402
 
 
 def _family(metric: str) -> TaskFamily:

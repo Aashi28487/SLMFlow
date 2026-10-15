@@ -1,10 +1,21 @@
 """Release validation: build, inspect, install and smoke-test SLMFlow.
 
 Run this on the stronger machine, from the repository root. It is NOT meant for
-the low-spec laptop, and it never runs a model or contacts a package index.
+the low-spec laptop. It never runs a model, starts a model server, runs the
+benchmarks or uploads anything.
+
+It DOES need network access: pip and the isolated build download pip, build,
+twine, hatchling and (for the test step) the ``dev`` extra from the configured
+package index (PyPI by default). It also installs packages into two throwaway
+virtual environments.
+
+Generated output goes under ``<repo>/release_check/`` only. ``--workdir`` must
+be that directory or a subdirectory of it; any other path is refused, and an
+existing non-empty directory is deleted only if this script created it (it
+carries a marker file).
 
     python scripts/validate_release.py
-    python scripts/validate_release.py --workdir release_check --keep-going
+    python scripts/validate_release.py --workdir release_check/run2 --keep-going
 
 Steps (each prints PASS/FAIL and elapsed time; the exit code is 0 only if all pass):
 
@@ -34,6 +45,8 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+WORKDIR_BASE = ROOT / "release_check"
+WORKDIR_MARKER = ".slmflow_validate_release"
 FORBIDDEN_IN_SDIST = ("data/", "benchmarks/results/", "docs/", ".pdf", ".docx", ".gguf")
 RESULTS: list[tuple[str, bool, float, str]] = []
 
@@ -42,6 +55,34 @@ def venv_python(env_dir: Path) -> Path:
     """Path of the interpreter inside a venv, on any platform."""
     sub = "Scripts" if sys.platform == "win32" else "bin"
     return env_dir / sub / ("python.exe" if sys.platform == "win32" else "python")
+
+
+def safe_workdir(arg: str) -> Path:
+    """Resolve ``--workdir`` and refuse anything that is not under ``release_check/``.
+
+    Raises:
+        ValueError: If the path is outside the dedicated output directory, is not
+            a directory, or already holds files this script did not create.
+    """
+    base = WORKDIR_BASE.resolve()
+    candidate = (ROOT / arg).resolve()  # an absolute ``arg`` replaces ROOT; checked below
+    try:
+        candidate.relative_to(base)
+    except ValueError:
+        raise ValueError(
+            f"refusing --workdir {arg!r} ({candidate}): it must be {base} or a "
+            f"subdirectory of it"
+        ) from None
+    if candidate.exists():
+        if not candidate.is_dir():
+            raise ValueError(f"refusing --workdir {candidate}: it exists and is not a directory")
+        if any(candidate.iterdir()) and not (candidate / WORKDIR_MARKER).is_file():
+            raise ValueError(
+                f"refusing to delete {candidate}: it is not empty and was not created by "
+                f"this script (no {WORKDIR_MARKER} marker). Remove it yourself or choose "
+                f"another subdirectory of release_check/"
+            )
+    return candidate
 
 
 def run(cmd: list[str], *, cwd: Path = ROOT, timeout: int = 1800) -> subprocess.CompletedProcess[str]:
@@ -96,10 +137,14 @@ def main() -> int:
     parser.add_argument("--skip-tests", action="store_true", help="skip the pytest step")
     args = parser.parse_args()
 
-    work = (ROOT / args.workdir).resolve()
+    try:
+        work = safe_workdir(args.workdir)
+    except ValueError as exc:
+        parser.error(str(exc))  # exits with status 2; nothing has been deleted
     if work.exists():
-        shutil.rmtree(work)
+        shutil.rmtree(work)  # safe: under release_check/ and created by this script
     work.mkdir(parents=True)
+    (work / WORKDIR_MARKER).write_text("created by scripts/validate_release.py\n", encoding="utf-8")
     dist = work / "dist"
     build_env, test_env = work / "venv-build", work / "venv-test"
     keep = args.keep_going

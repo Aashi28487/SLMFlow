@@ -33,6 +33,9 @@ venv/
 env/
 .eggs/
 
+# --- release validation output (venvs and dists from scripts/validate_release.py) ---
+release_check/
+
 # --- tooling caches ---
 .pytest_cache/
 .mypy_cache/

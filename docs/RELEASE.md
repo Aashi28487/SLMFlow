@@ -69,12 +69,31 @@ python -m twine upload --repository testpypi release_check/dist/*
 Then install it into a brand-new environment and run the quickstart:
 
 ```bash
-python -m venv tp && source tp/bin/activate        # Windows: tp\Scripts\activate
+python -m venv tp
+source tp/bin/activate                  # PowerShell: tp\Scripts\Activate.ps1
 pip install --index-url https://test.pypi.org/simple/ slmflow==0.1.0
 python -c "import slmflow; print(slmflow.__version__)"
 slmflow --version
-slmflow run <(printf 'name: t\nsteps:\n  - name: s\n    prompt: hi\n') --mock   # or use a saved yaml file
 ```
+
+Create a small config file (this one-liner works the same in bash, PowerShell
+and cmd; or save the three YAML lines below in `smoke.yaml` with any editor) and
+run it against the mock backend:
+
+```bash
+python -c "open('smoke.yaml','w').write('name: t\nsteps:\n  - name: s\n    prompt: hi\n')"
+slmflow run smoke.yaml --mock
+```
+
+```yaml
+name: t
+steps:
+  - name: s
+    prompt: hi
+```
+
+The run prints a `MOCK BACKEND` notice on stderr; the answer is scripted, not a
+model output. Exit code 0 (or 3 if it abstained) means the install works.
 
 Trusted publishing (GitHub Actions OIDC) is an alternative to tokens and avoids
 storing any secret; set it up in the PyPI project settings if you prefer it.
