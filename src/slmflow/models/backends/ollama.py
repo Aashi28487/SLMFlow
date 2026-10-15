@@ -18,11 +18,20 @@ import urllib.error
 import urllib.request
 from typing import Any, Sequence
 
+from slmflow.errors import BackendUnavailable
 from slmflow.types import Generation, MemoryFootprint, ModelCard
 
 __all__ = ["OllamaBackend"]
 
 _DEFAULT_BASE = "http://localhost:11434"
+
+
+def _is_unreachable(exc: BaseException) -> bool:
+    """True when the daemon refused or could not be contacted (not a slow reply)."""
+    reason = getattr(exc, "reason", exc)
+    return isinstance(reason, ConnectionError) or (
+        isinstance(reason, OSError) and not isinstance(reason, TimeoutError)
+    )
 
 
 class OllamaBackend:
@@ -46,6 +55,20 @@ class OllamaBackend:
                 return resp.status == 200
         except (urllib.error.URLError, OSError):
             return False
+
+    def _unavailable(self, card: ModelCard, exc: BaseException) -> BackendUnavailable:
+        """Build an actionable error for an unreachable daemon or an unpulled model."""
+        if isinstance(exc, urllib.error.HTTPError) and exc.code == 404:
+            return BackendUnavailable(
+                f"Ollama does not have model {card.model_id!r}",
+                backend=self.name,
+                install_hint=f"ollama pull {card.model_id}",
+            )
+        return BackendUnavailable(
+            f"could not reach the Ollama daemon at {self._base} ({exc})",
+            backend=self.name,
+            install_hint="start it with `ollama serve`, or set OLLAMA_HOST",
+        )
 
     # ------------------------------------------------------------------ #
     # Residency
@@ -72,7 +95,7 @@ class OllamaBackend:
                     pass
             self._loaded.add(card.model_id)
         except (urllib.error.URLError, OSError) as e:
-            raise RuntimeError(f"Failed to load {card.model_id} via Ollama: {e}") from e
+            raise self._unavailable(card, e) from e
 
     def unload(self, card: ModelCard) -> None:
         """Tell Ollama to unload the model by setting keep_alive=0."""
@@ -203,7 +226,20 @@ class OllamaBackend:
         try:
             with urllib.request.urlopen(req, timeout=self._timeout) as resp:
                 result = json.loads(resp.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                raise self._unavailable(card, e) from e
+            latency = time.perf_counter() - t0
+            return Generation(
+                text=f"ERROR: {e}",
+                model_id=card.model_id,
+                prompt_tokens=0,
+                output_tokens=0,
+                latency_s=latency,
+            )
         except (urllib.error.URLError, OSError) as e:
+            if _is_unreachable(e):
+                raise self._unavailable(card, e) from e
             latency = time.perf_counter() - t0
             return Generation(
                 text=f"ERROR: {e}",

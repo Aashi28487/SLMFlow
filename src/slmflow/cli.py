@@ -1,8 +1,7 @@
 """The ``slmflow`` command line. Stdlib ``argparse`` only.
 
-Typer would be nicer but would put a dependency in the base install, so the CLI
-uses ``argparse`` and Typer stays in the ``[cli]`` extra for anyone who wants
-the richer UX (``BUILD_BRIEF.md`` section 3).
+The CLI uses ``argparse`` so the base install stays dependency-free
+(``BUILD_BRIEF.md`` section 3).
 
 Commands:
 
@@ -193,6 +192,8 @@ def _build_registry(args: argparse.Namespace) -> Any:
 
     if getattr(args, "mock", False):
         from slmflow.models.backends.mock import MockBackend, make_pool
+
+        _err("MOCK BACKEND: scripted answers, no model was run. Numbers are not measurements.")
 
         registry = ModelRegistry(
             make_pool(

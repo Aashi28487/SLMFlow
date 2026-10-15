@@ -74,13 +74,18 @@ class ModelRegistry:
         return {model_id: card.digest for model_id, card in self._cards.items()}
 
     @classmethod
-    def from_file(cls, path: str) -> ModelRegistry:
+    def from_file(cls, path: str | Path | None = None) -> ModelRegistry:
+        """Load model cards from JSON (default ``benchmarks/results/model_cards.json``)."""
         import json
         from pathlib import Path
-        p = Path(path)
+        p = Path(path) if path is not None else DEFAULT_CARDS_PATH
         if not p.exists():
             from slmflow.errors import ConfigError
-            raise ConfigError(f"Missing cards file {p}, run profile_models")
+            raise ConfigError(
+                f"Missing model cards file {p}. Create it with "
+                f"`python -m benchmarks.profile_models` (needs a source checkout), "
+                f"pass registry=ModelRegistry(...) explicitly, or use --mock on the CLI"
+            )
         with p.open() as f:
             data = json.load(f)
         return cls([card_from_dict(d) for d in data])

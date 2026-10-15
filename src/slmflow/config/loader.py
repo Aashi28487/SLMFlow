@@ -161,9 +161,14 @@ class PipelineConfig:
 def load_config(path: str | Path, **overrides: Any) -> PipelineConfig:
     """Load and validate a pipeline config from a YAML or JSON file."""
     p = Path(path)
-    raw = load_yaml_file(p) if p.suffix in {".yaml", ".yml"} else json.loads(
-        p.read_text(encoding="utf-8")
-    )
+    if not p.is_file():
+        raise ConfigError(f"Config file not found: {p}. Check the path.", path=str(p))
+    try:
+        raw = load_yaml_file(p) if p.suffix in {".yaml", ".yml"} else json.loads(
+            p.read_text(encoding="utf-8")
+        )
+    except json.JSONDecodeError as exc:
+        raise ConfigError(f"Invalid JSON in {p}: {exc}", path=str(p)) from exc
     config = parse_config(raw, source_path=str(p))
     if overrides:
         from dataclasses import replace
