@@ -47,7 +47,7 @@ From PyPI (once released) or from a wheel:
 
 ```bash
 pip install slmflow                       # core only
-pip install path/to/slmflow-0.1.0-py3-none-any.whl
+pip install path/to/slmflow-0.1.1-py3-none-any.whl
 ```
 
 Optional extras:

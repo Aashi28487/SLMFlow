@@ -29,6 +29,7 @@ __pycache__/
 build/
 dist/
 .venv/
+.venv-release/
 venv/
 env/
 .eggs/
@@ -54,3 +55,5 @@ Thumbs.db
 # --- local overrides ---
 .env
 *.local.yaml
+.pypirc
+.pypirc.txt

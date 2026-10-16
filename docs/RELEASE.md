@@ -1,4 +1,4 @@
-# Release procedure (0.1.0)
+# Release procedure (0.1.1)
 
 **Do not run any of this on the low-spec laptop.** Everything below is for the
 stronger machine. Production PyPI upload requires explicit owner approval after
@@ -21,9 +21,9 @@ the final report has been reviewed.
 |---|---|
 | Authors / contact emails | Names only (Aashi, Sneha, Rutvik, Prakriti). Add `email = "..."` to `[project].authors` only with the owners' consent. |
 | Licence | MIT, copyright "2026 Aashi, Sneha, Rutvik, Prakriti". Confirm with all four authors and the institution that MIT is permitted (e.g. no university IP claim). |
-| Repository URL | `https://github.com/Aashi28487/SLMFlow` is the confirmed canonical repository for 0.1.0 and is already public (verified 2026-10-16). `pyproject.toml`, `README.md`, `RUN.md` and `tests/test_release.py` all reference it. |
+| Repository URL | `https://github.com/Aashi28487/SLMFlow` is the confirmed canonical repository for 0.1.1 and is already public (verified 2026-10-16). `pyproject.toml`, `README.md`, `RUN.md` and `tests/test_release.py` all reference it. |
 | Package name | `slmflow` returned 404 on both pypi.org and test.pypi.org when checked on 2026-10-15, i.e. unregistered. Only the first upload actually reserves it, and PyPI also rejects names too similar to existing ones. |
-| Version | `0.1.0` (alpha) in `src/slmflow/__init__.py`. A version can never be re-uploaded or replaced once published. |
+| Version | `0.1.1` (alpha) in `src/slmflow/__init__.py`. A version can never be re-uploaded or replaced once published. `0.1.0` is skipped: TestPyPI rejected its filenames ("previously used by a file that has since been deleted"); never rename or re-upload those files. |
 
 ## 2. Validate (stronger machine)
 
@@ -71,7 +71,7 @@ Then install it into a brand-new environment and run the quickstart:
 ```bash
 python -m venv tp
 source tp/bin/activate                  # PowerShell: tp\Scripts\Activate.ps1
-pip install --index-url https://test.pypi.org/simple/ slmflow==0.1.0
+pip install --index-url https://test.pypi.org/simple/ slmflow==0.1.1
 python -c "import slmflow; print(slmflow.__version__)"
 slmflow --version
 ```
@@ -112,5 +112,5 @@ export TWINE_PASSWORD=<pypi token>
 python -m twine upload release_check/dist/*
 ```
 
-Verify afterwards in a clean environment: `pip install slmflow==0.1.0`. Then tag
-the release in git (`git tag v0.1.0`) only if the owners authorise pushing tags.
+Verify afterwards in a clean environment: `pip install slmflow==0.1.1`. Then tag
+the release in git (`git tag v0.1.1`) only if the owners authorise pushing tags.

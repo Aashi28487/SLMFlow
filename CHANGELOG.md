@@ -4,10 +4,12 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## 0.1.0 - unreleased (initial alpha)
+## 0.1.1 - unreleased (initial alpha)
 
 First public release. Alpha: the API may change before 1.0, and no performance
-advantage is claimed (see the README limitations).
+advantage is claimed (see the README limitations). Version 0.1.0 was never
+published: TestPyPI rejected its filenames as previously used by a deleted
+file, so the first release is 0.1.1. The contents are those prepared as 0.1.0.
 
 ### Added
 - Memory-bounded orchestration core: two-tier memory budget, resource manager

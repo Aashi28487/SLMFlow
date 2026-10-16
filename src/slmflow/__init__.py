@@ -53,7 +53,7 @@ than estimated.
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from slmflow.config.loader import PipelineConfig, StepConfig, load_config, parse_config
 from slmflow.device import DeviceCard, probe
