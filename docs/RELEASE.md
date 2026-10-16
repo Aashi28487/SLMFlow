@@ -21,7 +21,7 @@ the final report has been reviewed.
 |---|---|
 | Authors / contact emails | Names only (Aashi, Sneha, Rutvik, Prakriti). Add `email = "..."` to `[project].authors` only with the owners' consent. |
 | Licence | MIT, copyright "2026 Aashi, Sneha, Rutvik, Prakriti". Confirm with all four authors and the institution that MIT is permitted (e.g. no university IP claim). |
-| Repository URL | `https://github.com/Aashi28487/SLMFlow` (confirm it is public before release, or links on PyPI will 404). |
+| Repository URL | `https://github.com/Aashi28487/SLMFlow` is the confirmed canonical repository for 0.1.0 and is already public (verified 2026-10-16). `pyproject.toml`, `README.md`, `RUN.md` and `tests/test_release.py` all reference it. |
 | Package name | `slmflow` returned 404 on both pypi.org and test.pypi.org when checked on 2026-10-15, i.e. unregistered. Only the first upload actually reserves it, and PyPI also rejects names too similar to existing ones. |
 | Version | `0.1.0` (alpha) in `src/slmflow/__init__.py`. A version can never be re-uploaded or replaced once published. |
 
